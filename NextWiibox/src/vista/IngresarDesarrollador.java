@@ -4,8 +4,6 @@
  */
 package vista;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author reeso
@@ -40,7 +38,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jTextField_direccion = new javax.swing.JTextField();
         jSeparator_direccion = new javax.swing.JSeparator();
         jLabel_comuna = new javax.swing.JLabel();
-        jTextField_correo = new javax.swing.JTextField();
+        jTextField_comuna = new javax.swing.JTextField();
         jSeparator_comuna = new javax.swing.JSeparator();
         jLabel_fono = new javax.swing.JLabel();
         jTextField_fono = new javax.swing.JTextField();
@@ -124,7 +122,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
 
         jTextField_direccion.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_direccion.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_direccion.setText("Vicuña Mackenna 4917");
+        jTextField_direccion.setText("correoFalso@dominioFalso.cl");
         jTextField_direccion.setBorder(null);
         jTextField_direccion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -144,23 +142,23 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jLabel_comuna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_comuna.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_comuna.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_comuna.setText("Correo:");
+        jLabel_comuna.setText("Comuna:");
 
-        jTextField_correo.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_correo.setText("correoFalso@dominioFalso.cl");
-        jTextField_correo.setBorder(null);
-        jTextField_correo.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField_comuna.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_comuna.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_comuna.setText("San Joaquin");
+        jTextField_comuna.setBorder(null);
+        jTextField_comuna.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseClicked(evt);
+                jTextField_comunaMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseEntered(evt);
+                jTextField_comunaMouseEntered(evt);
             }
         });
-        jTextField_correo.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextField_comuna.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_correoKeyPressed(evt);
+                jTextField_comunaKeyPressed(evt);
             }
         });
 
@@ -291,7 +289,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
                         .addGap(120, 120, 120)
                         .addComponent(jLabel_comuna, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jTextField_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_comuna, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ingresarDesarrolladorLayout.createSequentialGroup()
                         .addGap(260, 260, 260)
                         .addComponent(jSeparator_comuna, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -330,7 +328,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
                 .addComponent(jSeparator_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(ingresarDesarrolladorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_comuna)
-                    .addComponent(jTextField_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_comuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jSeparator_comuna, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(ingresarDesarrolladorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_fono)
@@ -397,17 +395,17 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_direccionKeyPressed
 
-    private void jTextField_correoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_correoMouseClicked
+    private void jTextField_comunaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_comunaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoMouseClicked
+    }//GEN-LAST:event_jTextField_comunaMouseClicked
 
-    private void jTextField_correoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_correoMouseEntered
+    private void jTextField_comunaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_comunaMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoMouseEntered
+    }//GEN-LAST:event_jTextField_comunaMouseEntered
 
-    private void jTextField_correoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_correoKeyPressed
+    private void jTextField_comunaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_comunaKeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoKeyPressed
+    }//GEN-LAST:event_jTextField_comunaKeyPressed
 
     private void jTextField_fonoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_fonoMouseClicked
         // TODO add your handling code here:
@@ -433,26 +431,9 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        String rut = jTextField_rut.getText();
-        verificarCamposEnBlanco(rut, "rut");
-        
-        String nombre = jTextField_nombre.getText();
-        verificarCamposEnBlanco(nombre, "nombre");
 
-        String direccion = jTextField_direccion.getText();
-        verificarCamposEnBlanco(direccion, "direccion");
-
-        String correo = jTextField_correo.getText();
-        verificarCamposEnBlanco(correo, "correo");
-
-        String fono = jTextField_correo.getText();
-        verificarCamposEnBlanco(fono, "fono");
     }//GEN-LAST:event_jLabel_registrarMouseClicked
-    public void verificarCamposEnBlanco(String campo,String nombre){
-        if(campo.equals("")){
-            JOptionPane.showMessageDialog(null,"El/La "+nombre+" no puede estar en blanco.");
-        }
-    }
+
     private void ingresarDesarrolladorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarDesarrolladorMouseDragged
         //BORRAR
     }//GEN-LAST:event_ingresarDesarrolladorMouseDragged
@@ -475,7 +456,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator_fono;
     private javax.swing.JSeparator jSeparator_nombre;
     private javax.swing.JSeparator jSeparator_rut;
-    private javax.swing.JTextField jTextField_correo;
+    private javax.swing.JTextField jTextField_comuna;
     private javax.swing.JTextField jTextField_direccion;
     private javax.swing.JTextField jTextField_fono;
     private javax.swing.JTextField jTextField_nombre;

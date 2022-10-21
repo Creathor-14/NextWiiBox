@@ -3,6 +3,8 @@ package modelo;
 public class Desarrollador extends Persona {
     private String fono;
 
+  
+
     public Desarrollador(String fono) {
         super();
         this.fono = "";

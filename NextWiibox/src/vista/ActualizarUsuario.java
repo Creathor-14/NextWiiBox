@@ -11,7 +11,7 @@ package vista;
 public class ActualizarUsuario extends javax.swing.JPanel {
 
     /**
-     * Creates new form AU
+     * Creates new form EliminarUsuario
      */
     public ActualizarUsuario() {
         initComponents();
@@ -26,56 +26,135 @@ public class ActualizarUsuario extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jTextField_fNac = new javax.swing.JTextField();
-        jSeparator_nombre = new javax.swing.JSeparator();
-        jSeparator_correo = new javax.swing.JSeparator();
-        jTextField_comuna = new javax.swing.JTextField();
-        jLabel_fNac = new javax.swing.JLabel();
-        jSeparator_rut = new javax.swing.JSeparator();
-        jLabel_rut = new javax.swing.JLabel();
-        jTextField_direccion = new javax.swing.JTextField();
+        jPanel_interaccion = new javax.swing.JPanel();
         jLabel_Titulo = new javax.swing.JLabel();
+        jLabel_rut = new javax.swing.JLabel();
+        jTextField_rut = new javax.swing.JTextField();
+        jSeparator_rut = new javax.swing.JSeparator();
         jLabel_nombre = new javax.swing.JLabel();
-        jSeparator_comuna = new javax.swing.JSeparator();
-        jLabel_telefono = new javax.swing.JLabel();
-        jPanel_registrar = new javax.swing.JPanel();
-        jLabel_registrar = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
+        jSeparator_nombre = new javax.swing.JSeparator();
+        jLabel_correo = new javax.swing.JLabel();
+        jTextField_correo = new javax.swing.JTextField();
+        jSeparator_correo = new javax.swing.JSeparator();
+        jLabel_comuna = new javax.swing.JLabel();
+        jTextField_comuna = new javax.swing.JTextField();
+        jSeparator_comuna = new javax.swing.JSeparator();
+        jLabel_direccion = new javax.swing.JLabel();
+        jTextField_direccion = new javax.swing.JTextField();
+        jSeparator_direccion = new javax.swing.JSeparator();
+        jLabel_telefono = new javax.swing.JLabel();
+        jTextField_telefono = new javax.swing.JTextField();
+        jSeparator_telefono = new javax.swing.JSeparator();
+        jLabel_fNac = new javax.swing.JLabel();
+        jTextField_fNac = new javax.swing.JTextField();
+        jSeparator_fNac = new javax.swing.JSeparator();
         jPanel_buscar = new javax.swing.JPanel();
         jLabel_buscar = new javax.swing.JLabel();
-        jTextField_rut = new javax.swing.JTextField();
-        jTextField_telefono = new javax.swing.JTextField();
-        jLabel_correo = new javax.swing.JLabel();
-        jLabel_comuna = new javax.swing.JLabel();
-        jLabel_direccion = new javax.swing.JLabel();
-        jSeparator_telefono = new javax.swing.JSeparator();
-        jTextField_correo = new javax.swing.JTextField();
-        jSeparator_fNac = new javax.swing.JSeparator();
-        jSeparator_direccion = new javax.swing.JSeparator();
+        jPanel_registrar = new javax.swing.JPanel();
+        jLabel_registrar = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel_interaccion.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_interaccion.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel_interaccion.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel_interaccionMouseDragged(evt);
+            }
+        });
+        jPanel_interaccion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField_fNac.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_fNac.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_fNac.setBorder(null);
-        jTextField_fNac.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel_Titulo.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_Titulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Titulo.setText("Ingresar Usuario");
+        jPanel_interaccion.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+
+        jLabel_rut.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_rut.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_rut.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_rut.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_rut.setText("Rut:");
+        jPanel_interaccion.add(jLabel_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 130, -1));
+
+        jTextField_rut.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_rut.setText("00.000.000-K");
+        jTextField_rut.setBorder(null);
+        jTextField_rut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_fNacMouseClicked(evt);
+                jTextField_rutMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_fNacMouseEntered(evt);
+                jTextField_rutMouseEntered(evt);
             }
         });
-        jTextField_fNac.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextField_rut.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_fNacKeyPressed(evt);
+                jTextField_rutKeyPressed(evt);
             }
         });
-        jPanel1.add(jTextField_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 270, -1));
-        jPanel1.add(jSeparator_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 270, 10));
-        jPanel1.add(jSeparator_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 270, 10));
+        jPanel_interaccion.add(jTextField_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
+        jPanel_interaccion.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));
+
+        jLabel_nombre.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_nombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_nombre.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_nombre.setText("Nombre:");
+        jPanel_interaccion.add(jLabel_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 130, -1));
+
+        jTextField_nombre.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_nombre.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_nombre.setBorder(null);
+        jTextField_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_nombreMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTextField_nombreMouseEntered(evt);
+            }
+        });
+        jTextField_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_nombreKeyPressed(evt);
+            }
+        });
+        jPanel_interaccion.add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 270, -1));
+        jPanel_interaccion.add(jSeparator_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 270, 10));
+
+        jLabel_correo.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_correo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_correo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_correo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_correo.setText("Correo:");
+        jPanel_interaccion.add(jLabel_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 130, -1));
+
+        jTextField_correo.setEditable(false);
+        jTextField_correo.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_correo.setBorder(null);
+        jTextField_correo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_correoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTextField_correoMouseEntered(evt);
+            }
+        });
+        jTextField_correo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_correoKeyPressed(evt);
+            }
+        });
+        jPanel_interaccion.add(jTextField_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 270, -1));
+        jPanel_interaccion.add(jSeparator_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 270, 10));
+
+        jLabel_comuna.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_comuna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_comuna.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_comuna.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_comuna.setText("Comuna:");
+        jPanel_interaccion.add(jLabel_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 130, -1));
 
         jTextField_comuna.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_comuna.setForeground(new java.awt.Color(102, 102, 102));
@@ -93,22 +172,15 @@ public class ActualizarUsuario extends javax.swing.JPanel {
                 jTextField_comunaKeyPressed(evt);
             }
         });
-        jPanel1.add(jTextField_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 270, -1));
+        jPanel_interaccion.add(jTextField_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 270, -1));
+        jPanel_interaccion.add(jSeparator_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 270, 10));
 
-        jLabel_fNac.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_fNac.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_fNac.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_fNac.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_fNac.setText("Fecha nacimiento:");
-        jPanel1.add(jLabel_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 130, -1));
-        jPanel1.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));
-
-        jLabel_rut.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_rut.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_rut.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_rut.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_rut.setText("Rut:");
-        jPanel1.add(jLabel_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 130, -1));
+        jLabel_direccion.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_direccion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_direccion.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_direccion.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_direccion.setText("Direccion:");
+        jPanel_interaccion.add(jLabel_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 130, -1));
 
         jTextField_direccion.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_direccion.setForeground(new java.awt.Color(102, 102, 102));
@@ -126,28 +198,89 @@ public class ActualizarUsuario extends javax.swing.JPanel {
                 jTextField_direccionKeyPressed(evt);
             }
         });
-        jPanel1.add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 270, -1));
-
-        jLabel_Titulo.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_Titulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_Titulo.setText("Ingresar Usuario");
-        jPanel1.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
-
-        jLabel_nombre.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_nombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_nombre.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_nombre.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_nombre.setText("Nombre:");
-        jPanel1.add(jLabel_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 130, -1));
-        jPanel1.add(jSeparator_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 270, 10));
+        jPanel_interaccion.add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 270, -1));
+        jPanel_interaccion.add(jSeparator_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 270, 10));
 
         jLabel_telefono.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_telefono.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_telefono.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_telefono.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel_telefono.setText("Telefono:");
-        jPanel1.add(jLabel_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 130, -1));
+        jPanel_interaccion.add(jLabel_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 130, -1));
+
+        jTextField_telefono.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_telefono.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_telefono.setBorder(null);
+        jTextField_telefono.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_telefonoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTextField_telefonoMouseEntered(evt);
+            }
+        });
+        jTextField_telefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_telefonoKeyPressed(evt);
+            }
+        });
+        jPanel_interaccion.add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 270, -1));
+        jPanel_interaccion.add(jSeparator_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 270, 10));
+
+        jLabel_fNac.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_fNac.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_fNac.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_fNac.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_fNac.setText("Fecha nacimiento:");
+        jPanel_interaccion.add(jLabel_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 130, -1));
+
+        jTextField_fNac.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_fNac.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_fNac.setBorder(null);
+        jTextField_fNac.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_fNacMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTextField_fNacMouseEntered(evt);
+            }
+        });
+        jTextField_fNac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_fNacKeyPressed(evt);
+            }
+        });
+        jPanel_interaccion.add(jTextField_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 270, -1));
+        jPanel_interaccion.add(jSeparator_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 270, 10));
+
+        jPanel_buscar.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_buscar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_buscar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_buscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_buscar.setText("Buscar");
+        jLabel_buscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_buscarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_buscarLayout = new javax.swing.GroupLayout(jPanel_buscar);
+        jPanel_buscar.setLayout(jPanel_buscarLayout);
+        jPanel_buscarLayout.setHorizontalGroup(
+            jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel_buscarLayout.setVerticalGroup(
+            jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel_interaccion.add(jPanel_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, -1));
 
         jPanel_registrar.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -182,144 +315,27 @@ public class ActualizarUsuario extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jPanel_registrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
-
-        jTextField_nombre.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_nombre.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_nombre.setBorder(null);
-        jTextField_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseEntered(evt);
-            }
-        });
-        jTextField_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_nombreKeyPressed(evt);
-            }
-        });
-        jPanel1.add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 270, -1));
-
-        jPanel_buscar.setBackground(new java.awt.Color(0, 153, 153));
-
-        jLabel_buscar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel_buscar.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_buscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_buscar.setText("Buscar");
-        jLabel_buscar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_buscarMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel_buscarLayout = new javax.swing.GroupLayout(jPanel_buscar);
-        jPanel_buscar.setLayout(jPanel_buscarLayout);
-        jPanel_buscarLayout.setHorizontalGroup(
-            jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel_buscarLayout.setVerticalGroup(
-            jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel1.add(jPanel_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, -1));
-
-        jTextField_rut.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_rut.setText("00.000.000-K");
-        jTextField_rut.setBorder(null);
-        jTextField_rut.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseEntered(evt);
-            }
-        });
-        jTextField_rut.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_rutKeyPressed(evt);
-            }
-        });
-        jPanel1.add(jTextField_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
-
-        jTextField_telefono.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_telefono.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_telefono.setBorder(null);
-        jTextField_telefono.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_telefonoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_telefonoMouseEntered(evt);
-            }
-        });
-        jTextField_telefono.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_telefonoKeyPressed(evt);
-            }
-        });
-        jPanel1.add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 270, -1));
-
-        jLabel_correo.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_correo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_correo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_correo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_correo.setText("Correo:");
-        jPanel1.add(jLabel_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 130, -1));
-
-        jLabel_comuna.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_comuna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_comuna.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_comuna.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_comuna.setText("Comuna:");
-        jPanel1.add(jLabel_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 130, -1));
-
-        jLabel_direccion.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_direccion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_direccion.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_direccion.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_direccion.setText("Direccion:");
-        jPanel1.add(jLabel_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 130, -1));
-        jPanel1.add(jSeparator_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 270, 10));
-
-        jTextField_correo.setEditable(false);
-        jTextField_correo.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_correo.setBorder(null);
-        jTextField_correo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseEntered(evt);
-            }
-        });
-        jTextField_correo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_correoKeyPressed(evt);
-            }
-        });
-        jPanel1.add(jTextField_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 270, -1));
-        jPanel1.add(jSeparator_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 270, 10));
-        jPanel1.add(jSeparator_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 270, 10));
+        jPanel_interaccion.add(jPanel_registrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+            .addGap(0, 660, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, 0)
+                    .addComponent(jPanel_interaccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(0, 0, 0)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
+            .addGap(0, 503, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, 0)
+                    .addComponent(jPanel_interaccion, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -429,6 +445,10 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         // Guardar los datos nuevos
     }//GEN-LAST:event_jLabel_registrarMouseClicked
 
+    private void actualizarUsuarioMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actualizarUsuarioMouseDragged
+        //BORRAR
+    }//GEN-LAST:event_actualizarUsuarioMouseDragged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel_Titulo;
@@ -441,8 +461,8 @@ public class ActualizarUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel_registrar;
     private javax.swing.JLabel jLabel_rut;
     private javax.swing.JLabel jLabel_telefono;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel_buscar;
+    private javax.swing.JPanel jPanel_interaccion;
     private javax.swing.JPanel jPanel_registrar;
     private javax.swing.JSeparator jSeparator_comuna;
     private javax.swing.JSeparator jSeparator_correo;

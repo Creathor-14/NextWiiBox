@@ -4,8 +4,6 @@
  */
 package vista;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author reeso
@@ -46,6 +44,9 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jLabel_telefono = new javax.swing.JLabel();
         jTextField_telefono = new javax.swing.JTextField();
         jSeparator_telefono = new javax.swing.JSeparator();
+        jLabel_clave = new javax.swing.JLabel();
+        jTextField_clave = new javax.swing.JTextField();
+        jSeparator_clave = new javax.swing.JSeparator();
         jPanel_menu = new javax.swing.JPanel();
         jLabel_menu = new javax.swing.JLabel();
         jPanel_registrar = new javax.swing.JPanel();
@@ -198,6 +199,30 @@ public class IngresarVendedor extends javax.swing.JPanel {
             }
         });
 
+        jLabel_clave.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_clave.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_clave.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_clave.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_clave.setText("Clave:");
+
+        jTextField_clave.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_clave.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_clave.setText("DD/MM/YYYY");
+        jTextField_clave.setBorder(null);
+        jTextField_clave.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_claveMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTextField_claveMouseEntered(evt);
+            }
+        });
+        jTextField_clave.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField_claveKeyPressed(evt);
+            }
+        });
+
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -304,7 +329,13 @@ public class IngresarVendedor extends javax.swing.JPanel {
                                     .addComponent(jTextField_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(ingresarVendedorLayout.createSequentialGroup()
                                     .addGap(140, 140, 140)
-                                    .addComponent(jSeparator_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jSeparator_clave, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(ingresarVendedorLayout.createSequentialGroup()
+                                    .addComponent(jLabel_clave, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(10, 10, 10)
+                                    .addGroup(ingresarVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jSeparator_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField_clave, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(ingresarVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(ingresarVendedorLayout.createSequentialGroup()
                                     .addComponent(jLabel_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -319,7 +350,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
                                         .addComponent(jLabel_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(10, 10, 10)
                                         .addComponent(jTextField_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addGap(0, 128, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
         );
         ingresarVendedorLayout.setVerticalGroup(
             ingresarVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,22 +383,30 @@ public class IngresarVendedor extends javax.swing.JPanel {
                     .addComponent(jTextField_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ingresarVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_clave)
+                    .addComponent(jTextField_clave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSeparator_clave, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
                 .addGroup(ingresarVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ingresarVendedor, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+            .addComponent(ingresarVendedor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ingresarVendedor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ingresarVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -436,6 +475,18 @@ public class IngresarVendedor extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_telefonoKeyPressed
 
+    private void jTextField_claveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_claveMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_claveMouseClicked
+
+    private void jTextField_claveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_claveMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_claveMouseEntered
+
+    private void jTextField_claveKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_claveKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_claveKeyPressed
+
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
         Menu menu = new Menu();
         menu.setSize(660, 460);
@@ -448,26 +499,9 @@ public class IngresarVendedor extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        String rut = jTextField_rut.getText();
-        verificarCamposEnBlanco(rut, "rut");
-        
-        String nombre = jTextField_nombre.getText();
-        verificarCamposEnBlanco(nombre, "nombre");
-        
-        String correo = jTextField_correo.getText();
-        verificarCamposEnBlanco(correo, "correo");
 
-        String direccion = jTextField_direccion.getText();
-        verificarCamposEnBlanco(direccion, "direccion");
-
-        String fono = jTextField_correo.getText();
-        verificarCamposEnBlanco(fono, "fono");
     }//GEN-LAST:event_jLabel_registrarMouseClicked
-    public void verificarCamposEnBlanco(String campo,String nombre){
-        if(campo.equals("")){
-            JOptionPane.showMessageDialog(null,"El/La "+nombre+" no puede estar en blanco.");
-        }
-    }
+
     private void ingresarVendedorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarVendedorMouseDragged
         //BORRAR
     }//GEN-LAST:event_ingresarVendedorMouseDragged
@@ -480,6 +514,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ingresarVendedor;
     private javax.swing.JLabel jLabel_Titulo;
+    private javax.swing.JLabel jLabel_clave;
     private javax.swing.JLabel jLabel_correo;
     private javax.swing.JLabel jLabel_direccion;
     private javax.swing.JLabel jLabel_menu;
@@ -490,11 +525,13 @@ public class IngresarVendedor extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel_menu;
     private javax.swing.JPanel jPanel_registrar;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JSeparator jSeparator_clave;
     private javax.swing.JSeparator jSeparator_correo;
     private javax.swing.JSeparator jSeparator_direccion;
     private javax.swing.JSeparator jSeparator_nombre;
     private javax.swing.JSeparator jSeparator_rut;
     private javax.swing.JSeparator jSeparator_telefono;
+    private javax.swing.JTextField jTextField_clave;
     private javax.swing.JTextField jTextField_correo;
     private javax.swing.JTextField jTextField_direccion;
     private javax.swing.JTextField jTextField_nombre;
