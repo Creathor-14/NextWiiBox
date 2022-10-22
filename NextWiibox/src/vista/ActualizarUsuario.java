@@ -56,11 +56,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
 
         jPanel_interaccion.setBackground(new java.awt.Color(51, 51, 51));
         jPanel_interaccion.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel_interaccion.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jPanel_interaccionMouseDragged(evt);
-            }
-        });
         jPanel_interaccion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel_Titulo.setBackground(new java.awt.Color(255, 255, 255));
