@@ -4,6 +4,8 @@
  */
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author reeso
@@ -499,9 +501,38 @@ public class IngresarVendedor extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-
+        
+        String rut = jTextField_rut.getText();
+        verificarCamposEnBlanco(rut, "rut");
+        
+        String nombre = jTextField_nombre.getText();
+        verificarCamposEnBlanco(nombre, "nombre");
+        
+        String correo = jTextField_correo.getText();
+        verificarCamposEnBlanco(correo, "correo");
+        
+        String direccion = jTextField_direccion.getText();
+        verificarCamposEnBlanco(direccion, "direccion");        
+        
+        String telefono = jTextField_telefono.getText();
+        verificarCamposEnBlanco(telefono, "telefono");        
+                         
+        
+        try{
+            Visualizador.sistema.ingresarVendedor (rut, nombre, correo, direccion, telefono);
+            JOptionPane.showMessageDialog(null,"Vendedor ingresado.");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage());
+            
+        }
     }//GEN-LAST:event_jLabel_registrarMouseClicked
-
+    
+    public void verificarCamposEnBlanco(String campo,String nombre){
+        if(campo.equals("")){
+            JOptionPane.showMessageDialog(null,"El/La "+nombre+" no puede estar en blanco.");
+        }
+    }
+    
     private void ingresarVendedorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarVendedorMouseDragged
         //BORRAR
     }//GEN-LAST:event_ingresarVendedorMouseDragged

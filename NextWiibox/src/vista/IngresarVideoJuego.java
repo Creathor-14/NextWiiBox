@@ -606,6 +606,8 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         
         String desarrollador = jTextField_desarrollador.getText();
         verificarCamposEnBlanco(desarrollador, "desarrollador");
+        
+        
     }//GEN-LAST:event_jLabel_registrarMouseClicked
     
     public void verificarCamposEnBlanco(String campo,String nombre){
