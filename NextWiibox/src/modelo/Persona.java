@@ -1,6 +1,6 @@
 package modelo;
 
-public class Persona {
+public abstract class Persona {
     private String rut;
     private String nombre;
     private String direccion;

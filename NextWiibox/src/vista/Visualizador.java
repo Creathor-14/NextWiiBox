@@ -4,7 +4,7 @@
  */
 package vista;
 
-import java.awt.BorderLayout;
+import controlador.Impl_prueba;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JComponent;
@@ -19,6 +19,7 @@ public class Visualizador extends javax.swing.JFrame {
     /**
      * Creates new form Visualizador1
      */
+    public static Impl_prueba sistema = new Impl_prueba();
     public Visualizador() {
         initComponents();
         this.setLocationRelativeTo(null);//hace que la pestaña se vea al centro

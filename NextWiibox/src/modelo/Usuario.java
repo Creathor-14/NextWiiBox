@@ -2,20 +2,20 @@ package modelo;
 
 public class Usuario extends Persona {
     
-    private String fechaN; //pasar a date
+    private Fecha fechaN; //pasar a date
     private String comuna;
     private String telefono;
     
 
     public Usuario() {
         super();
-        this.fechaN = ""; 
+        this.fechaN = null; 
         this.comuna = "";
         this.telefono = "";
         
     }   
 
-    public Usuario(String fechaN, String comuna, String telefono, String rut, String nombre, String direccion, String correo) {
+    public Usuario(Fecha fechaN, String comuna, String telefono, String rut, String nombre, String direccion, String correo) {
         super(rut, nombre, direccion, correo);
         this.fechaN = fechaN;
         this.comuna = comuna;
@@ -23,11 +23,11 @@ public class Usuario extends Persona {
           
     } 
 
-    public String getFechaN() {
+    public Fecha getFechaN() {
         return fechaN;
     }
 
-    public void setFechaN(String fechaN) {
+    public void setFechaN(Fecha fechaN) {
         this.fechaN = fechaN;
     }
 

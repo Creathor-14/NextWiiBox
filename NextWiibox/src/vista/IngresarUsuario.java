@@ -559,13 +559,21 @@ public class IngresarUsuario extends javax.swing.JPanel {
         String comuna = jTextField_comuna.getText();
         verificarCamposEnBlanco(comuna, "comuna");
 
+        String telefono = jTextField_telefono.getText();
+        verificarCamposEnBlanco(telefono, "telefono");
 
         String rut = jTextField_rut.getText();
         verificarCamposEnBlanco(rut, "rut");
 
         String correo = jTextField_correo.getText();
         verificarCamposEnBlanco(correo, "correo");
-
+        try{
+            Visualizador.sistema.ingresarUsuario(fecha, comuna, telefono, rut, nombre, direccion, correo);
+            JOptionPane.showMessageDialog(null,"Usuario ingresado.");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage());
+            
+        }
     }//GEN-LAST:event_jLabel_registrarMouseClicked
     public void verificarCamposEnBlanco(String campo,String nombre){
         if(campo.equals("")){

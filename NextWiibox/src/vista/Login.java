@@ -4,7 +4,7 @@
  */
 package vista;
 
-import java.awt.BorderLayout;
+
 
 /**
  *
@@ -12,9 +12,7 @@ import java.awt.BorderLayout;
  */
 public class Login extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Login
-     */
+    
     public Login() {
         initComponents();
     }

@@ -4,7 +4,7 @@ public class VideoJuego {
     private int codigo;
     private String nombre;
     private String version;    
-    private String fechaD;
+    private Fecha fechaD;
     private String categoria;
     private String genero;
     private int precio;
@@ -14,14 +14,14 @@ public class VideoJuego {
         this.codigo = 0;
         this.nombre = "";
         this.version = "";
-        this.fechaD = "";
+        this.fechaD = null;
         this.categoria = "";
         this.genero = "";
         this.precio = 0;
         this.desarrollador = null;
     }
 
-    public VideoJuego(int codigo, String nombre, String version, String fechaD, String categoria, String genero, int precio, Desarrollador desarrollador) {
+    public VideoJuego(int codigo, String nombre, String version, Fecha fechaD, String categoria, String genero, int precio, Desarrollador desarrollador) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.version = version;
@@ -64,11 +64,11 @@ public class VideoJuego {
         this.version = version;
     }
 
-    public String getFechaD() {
+    public Fecha getFechaD() {
         return fechaD;
     }
 
-    public void setFechaD(String fechaD) {
+    public void setFechaD(Fecha fechaD) {
         this.fechaD = fechaD;
     }
 
