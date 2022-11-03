@@ -49,7 +49,6 @@ public class Visualizador extends javax.swing.JFrame {
         cerrar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         diseño = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         contenido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,19 +61,8 @@ public class Visualizador extends javax.swing.JFrame {
         header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cerrar.setBackground(new java.awt.Color(0, 0, 0));
-        cerrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
-        cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cerrarMouseClicked(evt);
-            }
-        });
-        cerrar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                cerrarKeyPressed(evt);
-            }
-        });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("X");
@@ -89,17 +77,12 @@ public class Visualizador extends javax.swing.JFrame {
                 jLabel1MouseExited(evt);
             }
         });
-        jLabel1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jLabel1KeyPressed(evt);
-            }
-        });
 
         javax.swing.GroupLayout cerrarLayout = new javax.swing.GroupLayout(cerrar);
         cerrar.setLayout(cerrarLayout);
         cerrarLayout.setHorizontalGroup(
             cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
         cerrarLayout.setVerticalGroup(
             cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,11 +96,6 @@ public class Visualizador extends javax.swing.JFrame {
         diseño.setBackground(new java.awt.Color(0, 0, 0));
         diseño.setMaximumSize(new java.awt.Dimension(900, 500));
         diseño.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Logo");
-        diseño.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 110, -1, -1));
 
         contenido.setBackground(new java.awt.Color(51, 51, 51));
         contenido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -145,10 +123,6 @@ public class Visualizador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cerrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cerrarKeyPressed
-        
-    }//GEN-LAST:event_cerrarKeyPressed
     public static void Der(JComponent componente, int milisegundos, int saltos,int parar){
         (new Thread(){
             public void run(){
@@ -183,17 +157,9 @@ public class Visualizador extends javax.swing.JFrame {
             }
         }).start();
     }
-    private void jLabel1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel1KeyPressed
-        
-    }//GEN-LAST:event_jLabel1KeyPressed
-
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
-
-    private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
-        
-    }//GEN-LAST:event_cerrarMouseClicked
 
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
         cerrar.setBackground(Color.red);
@@ -247,6 +213,5 @@ public class Visualizador extends javax.swing.JFrame {
     private javax.swing.JPanel diseño;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

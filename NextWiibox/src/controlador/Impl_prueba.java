@@ -4,9 +4,12 @@ import modelo.Desarrollador;
 import modelo.Usuario;
 import modelo.Vendedor;
 import modelo.VideoJuego;
+import modelo.Arriendo;
+import modelo.Fecha;
+
 import java.util.ArrayList;
 import java.util.List;
-import modelo.Fecha;
+
 
 public class Impl_prueba implements SistemaI{
     
@@ -14,12 +17,13 @@ public class Impl_prueba implements SistemaI{
     private List <Usuario> lUsuario; 
     private List <Vendedor> lVendedor; 
     private List <VideoJuego> lVideojugo; 
-    
+    private List <Arriendo> lArriendo; 
     public Impl_prueba(){
         lDesarrollador = new ArrayList<>();
         lUsuario = new ArrayList<>();
         lVendedor = new ArrayList<>();
         lVideojugo = new ArrayList<>();
+        lArriendo = new ArrayList<>();
     }
     
     public boolean rutUnico(String rut){
@@ -148,5 +152,33 @@ public class Impl_prueba implements SistemaI{
     // ingresar el vendedor
         Vendedor v = new Vendedor(fono, rut, nombre, direccion, correo);
         return lVendedor.add(v);
+    }
+    public boolean ingresarArriendo(int codigoVideojuego, String rutUsuario){
+        int posicionV = -1;
+        for(int i=0;i<lVideojugo.size();i++){
+            VideoJuego v= lVideojugo.get(i);
+                if(v.getCodigo()==codigoVideojuego){
+                    posicionV = i;
+                    break;
+                }
+        }
+        if(posicionV == -1){
+            throw new NullPointerException("No existe un juego con este codigo.");
+        }
+        int posicionU = -1;
+        for(int i=0;i<lUsuario.size();i++){
+            Usuario u= lUsuario.get(i);
+                if(u.getRut().equals(rutUsuario)){
+                    posicionU = i;
+                    break;
+                }
+        }
+        if(posicionU == -1){
+            throw new NullPointerException("No usuario con este rut.");
+        }
+        Arriendo a = new Arriendo(lVideojugo.get(posicionV), lUsuario.get(posicionU));
+        lArriendo.add(a);
+        lVideojugo.remove(posicionV);
+        return true;
     }
 }
