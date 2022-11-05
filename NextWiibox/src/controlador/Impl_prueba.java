@@ -153,7 +153,14 @@ public class Impl_prueba implements SistemaI{
         Vendedor v = new Vendedor(fono, rut, nombre, direccion, correo);
         return lVendedor.add(v);
     }
-    public boolean ingresarArriendo(int codigoVideojuego, String rutUsuario){
+    public boolean ingresarArriendo(String codigo, String rutUsuario){
+        int codigoVideojuego;
+        try{
+            codigoVideojuego= Integer.valueOf(codigo);
+        }catch(Exception e){
+            throw new NullPointerException("Codigo del juego no valido.");
+        }
+        
         int posicionV = -1;
         for(int i=0;i<lVideojugo.size();i++){
             VideoJuego v= lVideojugo.get(i);

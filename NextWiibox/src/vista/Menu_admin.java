@@ -189,12 +189,12 @@ public class Menu_admin extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_AccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_AccederMouseClicked
-        IngresarUsuario ingresarUsuario = new IngresarUsuario();
-        ingresarUsuario.setSize(660, 460);
-        ingresarUsuario.setLocation(0,0);
+        IngresarArriendo ingresarArriendo = new IngresarArriendo();
+        ingresarArriendo.setSize(660, 460);
+        ingresarArriendo.setLocation(0,0);
         
         menu.removeAll();
-        menu.add(ingresarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        menu.add(ingresarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         menu.revalidate();
         menu.repaint();
     }//GEN-LAST:event_jLabel_AccederMouseClicked
