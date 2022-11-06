@@ -197,4 +197,40 @@ public class Impl_prueba implements SistemaI{
         }
         return -1;
     }
+    public boolean eliminarUsuario(String rut){
+        for(Usuario u : lUsuario){
+            if(u.getRut().equalsIgnoreCase(rut)){
+                lUsuario.remove(u);
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean eliminarVendedor(String rut){
+        for(Vendedor v : lVendedor){
+            if(v.getRut().equalsIgnoreCase(rut)){
+                lVendedor.remove(v);
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean eliminarDesarrollador(String rut){
+        for(Desarrollador d : lDesarrollador){
+            if(d.getRut().equalsIgnoreCase(rut)){
+                lDesarrollador.remove(d);
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean eliminarVideoJuego(int codigo){
+        for(VideoJuego v: lVideojugo){
+            if(v.getCodigo()==codigo){
+                lVideojugo.remove(v);
+                return true;
+            }
+        }
+        return false;
+    }
 }
