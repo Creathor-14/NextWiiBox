@@ -367,7 +367,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu menu = new Menu();
+        Menu_administrador menu = new Menu_administrador();
         menu.setSize(660, 460);
         menu.setLocation(0,0);
 

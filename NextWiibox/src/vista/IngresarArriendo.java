@@ -221,7 +221,7 @@ public class IngresarArriendo extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_admin menu_admin = new Menu_admin();
+        Menu_vendedor menu_admin = new Menu_vendedor();
         menu_admin.setSize(660, 460);
         menu_admin.setLocation(0,0);
 

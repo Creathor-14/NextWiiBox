@@ -185,7 +185,7 @@ public class Login extends javax.swing.JPanel {
         // Llamar a un panel
         //https://www.youtube.com/watch?v=iFlHGwmYdjI&t=1s
         
-        Menu_admin menu_admin = new Menu_admin();
+        Menu_vendedor menu_admin = new Menu_vendedor();
         menu_admin.setSize(660, 460);
         menu_admin.setLocation(0,0);
 
@@ -198,7 +198,7 @@ public class Login extends javax.swing.JPanel {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        Menu menu = new Menu();
+        Menu_administrador menu = new Menu_administrador();
         menu.setSize(660, 460);
         menu.setLocation(0,0);
 

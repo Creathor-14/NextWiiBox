@@ -188,6 +188,11 @@ public class EliminarArriendo extends javax.swing.JPanel {
         );
 
         jComboBox_videojuegos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Videojuego 1", "Videojuego 2", "Videojuego 3", "Videojuego 4" }));
+        jComboBox_videojuegos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_videojuegosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ingresarUsuarioLayout = new javax.swing.GroupLayout(ingresarUsuario);
         ingresarUsuario.setLayout(ingresarUsuarioLayout);
@@ -278,7 +283,7 @@ public class EliminarArriendo extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_admin menu_admin = new Menu_admin();
+        Menu_vendedor menu_admin = new Menu_vendedor();
         menu_admin.setSize(660, 460);
         menu_admin.setLocation(0,0);
 
@@ -330,6 +335,10 @@ public class EliminarArriendo extends javax.swing.JPanel {
         }
         
     }//GEN-LAST:event_jLabel_registrar1MouseClicked
+
+    private void jComboBox_videojuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_videojuegosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox_videojuegosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
