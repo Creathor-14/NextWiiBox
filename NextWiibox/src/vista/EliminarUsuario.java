@@ -4,6 +4,8 @@
  */
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author thoma
@@ -164,7 +166,13 @@ public class EliminarUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_eliminarMouseClicked
-        //Eliminar el usuario
+        String rut = jLabel_rut.getText();
+        boolean eliminado = Visualizador.sistema.eliminarUsuario(rut);
+        if(eliminado){
+            JOptionPane.showMessageDialog(null,"Usuario eliminado.");
+        }else{
+            JOptionPane.showMessageDialog(null,"No existe un usuario con este rut.");
+        }
     }//GEN-LAST:event_jLabel_eliminarMouseClicked
 
 

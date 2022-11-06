@@ -4,6 +4,8 @@
  */
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author thoma
@@ -164,7 +166,14 @@ public class EliminarVideoJuego extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        //Eliminar el usuario
+        String c = jLabel_rut.getText();
+        int codigo = Integer.valueOf(c);
+        boolean eliminado = Visualizador.sistema.eliminarVideoJuego(codigo);
+        if(eliminado){
+            JOptionPane.showMessageDialog(null,"Videojuego eliminado.");
+        }else{
+            JOptionPane.showMessageDialog(null,"No existe un videojuego con este codigo.");
+        }
     }//GEN-LAST:event_jLabel_registrarMouseClicked
 
 

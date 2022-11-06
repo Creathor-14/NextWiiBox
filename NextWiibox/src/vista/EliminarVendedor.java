@@ -4,6 +4,8 @@
  */
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author thoma
@@ -164,7 +166,13 @@ public class EliminarVendedor extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        //Eliminar el usuario
+        String rut = jLabel_rut.getText();
+        boolean eliminado = Visualizador.sistema.eliminarVendedor(rut);
+        if(eliminado){
+            JOptionPane.showMessageDialog(null,"Vendedor eliminado.");
+        }else{
+            JOptionPane.showMessageDialog(null,"No existe un vendedor con este rut.");
+        }
     }//GEN-LAST:event_jLabel_registrarMouseClicked
 
 
