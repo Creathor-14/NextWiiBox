@@ -81,24 +81,6 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_rut.setText("00.000.000-K");
         jTextField_rut.setBorder(null);
-        jTextField_rut.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseEntered(evt);
-            }
-        });
-        jTextField_rut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_rutActionPerformed(evt);
-            }
-        });
-        jTextField_rut.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_rutKeyPressed(evt);
-            }
-        });
 
         jLabel_nombre.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_nombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -110,19 +92,6 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jTextField_nombre.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_nombre.setText("Juan Navarro");
         jTextField_nombre.setBorder(null);
-        jTextField_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseEntered(evt);
-            }
-        });
-        jTextField_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_nombreKeyPressed(evt);
-            }
-        });
 
         jLabel_correo.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_correo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -134,19 +103,6 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_correo.setText("correoFalso@dominioFalso.cl");
         jTextField_correo.setBorder(null);
-        jTextField_correo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseEntered(evt);
-            }
-        });
-        jTextField_correo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_correoKeyPressed(evt);
-            }
-        });
 
         jLabel_direccion.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_direccion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -158,19 +114,6 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jTextField_direccion.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_direccion.setText("Industrias 111");
         jTextField_direccion.setBorder(null);
-        jTextField_direccion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_direccionMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_direccionMouseEntered(evt);
-            }
-        });
-        jTextField_direccion.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_direccionKeyPressed(evt);
-            }
-        });
 
         jLabel_telefono.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_telefono.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -182,24 +125,6 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jTextField_telefono.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_telefono.setText("+56 9 0000 0000");
         jTextField_telefono.setBorder(null);
-        jTextField_telefono.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_telefonoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_telefonoMouseEntered(evt);
-            }
-        });
-        jTextField_telefono.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_telefonoActionPerformed(evt);
-            }
-        });
-        jTextField_telefono.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_telefonoKeyPressed(evt);
-            }
-        });
 
         jLabel_clave.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_clave.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -209,21 +134,8 @@ public class IngresarVendedor extends javax.swing.JPanel {
 
         jTextField_clave.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_clave.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_clave.setText("DD/MM/YYYY");
+        jTextField_clave.setText("DD/MM/YY");
         jTextField_clave.setBorder(null);
-        jTextField_clave.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_claveMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_claveMouseEntered(evt);
-            }
-        });
-        jTextField_clave.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_claveKeyPressed(evt);
-            }
-        });
 
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -412,83 +324,6 @@ public class IngresarVendedor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField_rutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_rutMouseClicked
-
-    }//GEN-LAST:event_jTextField_rutMouseClicked
-
-    private void jTextField_rutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_rutMouseEntered
-        //BORRAR
-    }//GEN-LAST:event_jTextField_rutMouseEntered
-
-    private void jTextField_rutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_rutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_rutActionPerformed
-
-    private void jTextField_rutKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_rutKeyPressed
-        //hacer que con el tab desaparesca ************
-        //sino borrar
-    }//GEN-LAST:event_jTextField_rutKeyPressed
-
-    private void jTextField_nombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_nombreMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreMouseClicked
-
-    private void jTextField_nombreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_nombreMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreMouseEntered
-
-    private void jTextField_nombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nombreKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreKeyPressed
-
-    private void jTextField_correoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_correoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoMouseClicked
-
-    private void jTextField_correoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_correoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoMouseEntered
-
-    private void jTextField_correoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_correoKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoKeyPressed
-
-    private void jTextField_direccionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_direccionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionMouseClicked
-
-    private void jTextField_direccionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_direccionMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionMouseEntered
-
-    private void jTextField_direccionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_direccionKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionKeyPressed
-
-    private void jTextField_telefonoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_telefonoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_telefonoMouseClicked
-
-    private void jTextField_telefonoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_telefonoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_telefonoMouseEntered
-
-    private void jTextField_telefonoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_telefonoKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_telefonoKeyPressed
-
-    private void jTextField_claveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_claveMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_claveMouseClicked
-
-    private void jTextField_claveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_claveMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_claveMouseEntered
-
-    private void jTextField_claveKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_claveKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_claveKeyPressed
-
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
         Menu menu = new Menu();
         menu.setSize(660, 460);
@@ -536,10 +371,6 @@ public class IngresarVendedor extends javax.swing.JPanel {
     private void ingresarVendedorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarVendedorMouseDragged
         //BORRAR
     }//GEN-LAST:event_ingresarVendedorMouseDragged
-
-    private void jTextField_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_telefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_telefonoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

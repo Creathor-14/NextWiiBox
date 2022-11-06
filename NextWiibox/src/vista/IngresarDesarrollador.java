@@ -73,24 +73,6 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_rut.setText("00.000.000-K");
         jTextField_rut.setBorder(null);
-        jTextField_rut.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseEntered(evt);
-            }
-        });
-        jTextField_rut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_rutActionPerformed(evt);
-            }
-        });
-        jTextField_rut.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_rutKeyPressed(evt);
-            }
-        });
 
         jLabel_nombre.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_nombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -102,19 +84,6 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jTextField_nombre.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_nombre.setText("Juan Navarro");
         jTextField_nombre.setBorder(null);
-        jTextField_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseEntered(evt);
-            }
-        });
-        jTextField_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_nombreKeyPressed(evt);
-            }
-        });
 
         jLabel_direccion.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_direccion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -126,19 +95,6 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jTextField_direccion.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_direccion.setText("correoFalso@dominioFalso.cl");
         jTextField_direccion.setBorder(null);
-        jTextField_direccion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_direccionMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_direccionMouseEntered(evt);
-            }
-        });
-        jTextField_direccion.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_direccionKeyPressed(evt);
-            }
-        });
 
         jLabel_comuna.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_comuna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -150,19 +106,6 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jTextField_comuna.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_comuna.setText("San Joaquin");
         jTextField_comuna.setBorder(null);
-        jTextField_comuna.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_comunaMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_comunaMouseEntered(evt);
-            }
-        });
-        jTextField_comuna.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_comunaKeyPressed(evt);
-            }
-        });
 
         jLabel_fono.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_fono.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -174,19 +117,6 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jTextField_fono.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_fono.setText("Industrias 111");
         jTextField_fono.setBorder(null);
-        jTextField_fono.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_fonoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_fonoMouseEntered(evt);
-            }
-        });
-        jTextField_fono.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_fonoKeyPressed(evt);
-            }
-        });
 
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -355,71 +285,6 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
                 .addComponent(ingresarDesarrollador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField_rutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_rutMouseClicked
-
-    }//GEN-LAST:event_jTextField_rutMouseClicked
-
-    private void jTextField_rutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_rutMouseEntered
-        //BORRAR
-    }//GEN-LAST:event_jTextField_rutMouseEntered
-
-    private void jTextField_rutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_rutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_rutActionPerformed
-
-    private void jTextField_rutKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_rutKeyPressed
-        //hacer que con el tab desaparesca ************
-        //sino borrar
-    }//GEN-LAST:event_jTextField_rutKeyPressed
-
-    private void jTextField_nombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_nombreMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreMouseClicked
-
-    private void jTextField_nombreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_nombreMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreMouseEntered
-
-    private void jTextField_nombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nombreKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreKeyPressed
-
-    private void jTextField_direccionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_direccionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionMouseClicked
-
-    private void jTextField_direccionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_direccionMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionMouseEntered
-
-    private void jTextField_direccionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_direccionKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionKeyPressed
-
-    private void jTextField_comunaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_comunaMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_comunaMouseClicked
-
-    private void jTextField_comunaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_comunaMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_comunaMouseEntered
-
-    private void jTextField_comunaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_comunaKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_comunaKeyPressed
-
-    private void jTextField_fonoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_fonoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_fonoMouseClicked
-
-    private void jTextField_fonoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_fonoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_fonoMouseEntered
-
-    private void jTextField_fonoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_fonoKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_fonoKeyPressed
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
         Menu menu = new Menu();

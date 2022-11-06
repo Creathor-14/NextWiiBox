@@ -75,19 +75,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_rut.setText("00.000.000-K");
         jTextField_rut.setBorder(null);
-        jTextField_rut.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_rutMouseEntered(evt);
-            }
-        });
-        jTextField_rut.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_rutKeyPressed(evt);
-            }
-        });
         jPanel_interaccion.add(jTextField_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
         jPanel_interaccion.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));
 
@@ -101,19 +88,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jTextField_nombre.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_nombre.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_nombre.setBorder(null);
-        jTextField_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_nombreMouseEntered(evt);
-            }
-        });
-        jTextField_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_nombreKeyPressed(evt);
-            }
-        });
         jPanel_interaccion.add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 270, -1));
         jPanel_interaccion.add(jSeparator_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 270, 10));
 
@@ -128,19 +102,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jTextField_correo.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_correo.setBorder(null);
-        jTextField_correo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_correoMouseEntered(evt);
-            }
-        });
-        jTextField_correo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_correoKeyPressed(evt);
-            }
-        });
         jPanel_interaccion.add(jTextField_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 270, -1));
         jPanel_interaccion.add(jSeparator_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 270, 10));
 
@@ -154,19 +115,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jTextField_comuna.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_comuna.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_comuna.setBorder(null);
-        jTextField_comuna.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_comunaMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_comunaMouseEntered(evt);
-            }
-        });
-        jTextField_comuna.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_comunaKeyPressed(evt);
-            }
-        });
         jPanel_interaccion.add(jTextField_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 270, -1));
         jPanel_interaccion.add(jSeparator_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 270, 10));
 
@@ -180,19 +128,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jTextField_direccion.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_direccion.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_direccion.setBorder(null);
-        jTextField_direccion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_direccionMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_direccionMouseEntered(evt);
-            }
-        });
-        jTextField_direccion.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_direccionKeyPressed(evt);
-            }
-        });
         jPanel_interaccion.add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 270, -1));
         jPanel_interaccion.add(jSeparator_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 270, 10));
 
@@ -206,19 +141,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jTextField_telefono.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_telefono.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_telefono.setBorder(null);
-        jTextField_telefono.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_telefonoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_telefonoMouseEntered(evt);
-            }
-        });
-        jTextField_telefono.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_telefonoKeyPressed(evt);
-            }
-        });
         jPanel_interaccion.add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 270, -1));
         jPanel_interaccion.add(jSeparator_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 270, 10));
 
@@ -232,19 +154,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jTextField_fNac.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_fNac.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_fNac.setBorder(null);
-        jTextField_fNac.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField_fNacMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jTextField_fNacMouseEntered(evt);
-            }
-        });
-        jTextField_fNac.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField_fNacKeyPressed(evt);
-            }
-        });
         jPanel_interaccion.add(jTextField_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 270, -1));
         jPanel_interaccion.add(jSeparator_fNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 270, 10));
 
@@ -333,91 +242,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField_rutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_rutMouseClicked
-
-    }//GEN-LAST:event_jTextField_rutMouseClicked
-
-    private void jTextField_rutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_rutMouseEntered
-        //BORRAR
-    }//GEN-LAST:event_jTextField_rutMouseEntered
-
-    private void jTextField_rutKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_rutKeyPressed
-        //hacer que con el tab desaparesca ************
-        //sino borrar
-    }//GEN-LAST:event_jTextField_rutKeyPressed
-
-    private void jTextField_nombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_nombreMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreMouseClicked
-
-    private void jTextField_nombreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_nombreMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreMouseEntered
-
-    private void jTextField_nombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nombreKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_nombreKeyPressed
-
-    private void jTextField_correoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_correoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoMouseClicked
-
-    private void jTextField_correoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_correoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoMouseEntered
-
-    private void jTextField_correoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_correoKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_correoKeyPressed
-
-    private void jTextField_comunaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_comunaMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_comunaMouseClicked
-
-    private void jTextField_comunaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_comunaMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_comunaMouseEntered
-
-    private void jTextField_comunaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_comunaKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_comunaKeyPressed
-
-    private void jTextField_direccionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_direccionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionMouseClicked
-
-    private void jTextField_direccionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_direccionMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionMouseEntered
-
-    private void jTextField_direccionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_direccionKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_direccionKeyPressed
-
-    private void jTextField_telefonoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_telefonoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_telefonoMouseClicked
-
-    private void jTextField_telefonoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_telefonoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_telefonoMouseEntered
-
-    private void jTextField_telefonoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_telefonoKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_telefonoKeyPressed
-
-    private void jTextField_fNacMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_fNacMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_fNacMouseClicked
-
-    private void jTextField_fNacMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_fNacMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_fNacMouseEntered
-
-    private void jTextField_fNacKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_fNacKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_fNacKeyPressed
 
     private void jLabel_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_buscarMouseClicked
         //Buscar al usuario segun el rut

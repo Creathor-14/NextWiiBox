@@ -28,7 +28,7 @@ public class Visualizador extends javax.swing.JFrame {
         Login login = new Login();
         login.setSize(660, 460);
         login.setLocation(0,0);
-        
+
         contenido.removeAll();
         contenido.add(login,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         contenido.revalidate();

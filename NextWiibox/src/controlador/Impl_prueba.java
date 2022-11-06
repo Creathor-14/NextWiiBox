@@ -188,4 +188,13 @@ public class Impl_prueba implements SistemaI{
         lVideojugo.remove(posicionV);
         return true;
     }
+    public int existeUsuario(String rut){
+        for(int i=0;i<lUsuario.size();i++){
+            Usuario u = lUsuario.get(i);
+            if(u.getRut().equalsIgnoreCase(rut)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }

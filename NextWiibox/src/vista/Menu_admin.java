@@ -211,12 +211,12 @@ public class Menu_admin extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_Acceder1MouseClicked
 
     private void jLabel_Acceder2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder2MouseClicked
-        EliminarUsuario eliminarUsuario = new EliminarUsuario();
-        eliminarUsuario.setSize(660, 460);
-        eliminarUsuario.setLocation(0,0);
+        EliminarArriendo eliminarArriendo = new EliminarArriendo();
+        eliminarArriendo.setSize(660, 460);
+        eliminarArriendo.setLocation(0,0);
         
         menu.removeAll();
-        menu.add(eliminarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        menu.add(eliminarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         menu.revalidate();
         menu.repaint();
     }//GEN-LAST:event_jLabel_Acceder2MouseClicked
