@@ -80,7 +80,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
 
         jTextField_codigo.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_codigo.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_codigo.setText("00.000.000-K");
+        jTextField_codigo.setText("0001");
         jTextField_codigo.setBorder(null);
 
         jLabel_nombre.setBackground(new java.awt.Color(255, 255, 255));
@@ -91,7 +91,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
 
         jTextField_nombre.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_nombre.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_nombre.setText("Juan Navarro");
+        jTextField_nombre.setText("Pepe y los globos");
         jTextField_nombre.setBorder(null);
 
         jLabel_version.setBackground(new java.awt.Color(255, 255, 255));
@@ -102,7 +102,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
 
         jTextField_version.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_version.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_version.setText("correoFalso@dominioFalso.cl");
+        jTextField_version.setText("1.0A");
         jTextField_version.setBorder(null);
 
         jLabel_fecha.setBackground(new java.awt.Color(255, 255, 255));
@@ -113,7 +113,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
 
         jTextField_fecha.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_fecha.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_fecha.setText("San Joaquin");
+        jTextField_fecha.setText("DD/MM/YY");
         jTextField_fecha.setBorder(null);
 
         jLabel_categoria.setBackground(new java.awt.Color(255, 255, 255));
@@ -124,7 +124,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
 
         jTextField_categoria.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_categoria.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_categoria.setText("Industrias 111");
+        jTextField_categoria.setText("?");
         jTextField_categoria.setBorder(null);
 
         jLabel_genero.setBackground(new java.awt.Color(255, 255, 255));
@@ -135,7 +135,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
 
         jTextField_genero.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_genero.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_genero.setText("+56 9 0000 0000");
+        jTextField_genero.setText("acción");
         jTextField_genero.setBorder(null);
 
         jLabel_precio.setBackground(new java.awt.Color(255, 255, 255));
@@ -146,7 +146,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
 
         jTextField_precio.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_precio.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_precio.setText("DD/MM/YY");
+        jTextField_precio.setText("10000");
         jTextField_precio.setBorder(null);
 
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));

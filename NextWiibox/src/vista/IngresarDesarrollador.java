@@ -71,7 +71,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
 
         jTextField_rut.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_rut.setText("00.000.000-K");
+        jTextField_rut.setText("11.111.111-1");
         jTextField_rut.setBorder(null);
 
         jLabel_nombre.setBackground(new java.awt.Color(255, 255, 255));
@@ -93,7 +93,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
 
         jTextField_direccion.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_direccion.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_direccion.setText("correoFalso@dominioFalso.cl");
+        jTextField_direccion.setText("correoFalso1@dominioFalso.cl");
         jTextField_direccion.setBorder(null);
 
         jLabel_comuna.setBackground(new java.awt.Color(255, 255, 255));

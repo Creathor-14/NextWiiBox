@@ -8,12 +8,12 @@ package vista;
  *
  * @author thoma
  */
-public class EliminarUsuario extends javax.swing.JPanel {
+public class EliminarVendedor extends javax.swing.JPanel {
 
     /**
      * Creates new form EliminarUsuario
      */
-    public EliminarUsuario() {
+    public EliminarVendedor() {
         initComponents();
     }
 
@@ -33,8 +33,8 @@ public class EliminarUsuario extends javax.swing.JPanel {
         jSeparator_rut = new javax.swing.JSeparator();
         jPanel_menu = new javax.swing.JPanel();
         jLabel_menu = new javax.swing.JLabel();
-        jPanel_registrar = new javax.swing.JPanel();
-        jLabel_eliminar = new javax.swing.JLabel();
+        jPanel_eliminar = new javax.swing.JPanel();
+        jLabel_registrar = new javax.swing.JLabel();
 
         eliminarUsuario.setBackground(new java.awt.Color(51, 51, 51));
         eliminarUsuario.setForeground(new java.awt.Color(51, 51, 51));
@@ -43,7 +43,7 @@ public class EliminarUsuario extends javax.swing.JPanel {
         jLabel_Titulo.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_Titulo.setText("Eliminar Usuario");
+        jLabel_Titulo.setText("Eliminar Vendedor");
         eliminarUsuario.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
         jLabel_rut.setBackground(new java.awt.Color(255, 255, 255));
@@ -55,7 +55,7 @@ public class EliminarUsuario extends javax.swing.JPanel {
 
         jTextField_rut.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_rut.setText("00.000.000-K");
+        jTextField_rut.setText("22.222.222-2");
         jTextField_rut.setBorder(null);
         eliminarUsuario.add(jTextField_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
         eliminarUsuario.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));
@@ -95,40 +95,40 @@ public class EliminarUsuario extends javax.swing.JPanel {
 
         eliminarUsuario.add(jPanel_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, -1, -1));
 
-        jPanel_registrar.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel_eliminar.setBackground(new java.awt.Color(0, 153, 153));
 
-        jLabel_eliminar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel_eliminar.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_eliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_eliminar.setText("Eliminar");
-        jLabel_eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel_registrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_registrar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_registrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_registrar.setText("Eliminar");
+        jLabel_registrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_eliminarMouseClicked(evt);
+                jLabel_registrarMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel_registrarLayout = new javax.swing.GroupLayout(jPanel_registrar);
-        jPanel_registrar.setLayout(jPanel_registrarLayout);
-        jPanel_registrarLayout.setHorizontalGroup(
-            jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jPanel_eliminarLayout = new javax.swing.GroupLayout(jPanel_eliminar);
+        jPanel_eliminar.setLayout(jPanel_eliminarLayout);
+        jPanel_eliminarLayout.setHorizontalGroup(
+            jPanel_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
-            .addGroup(jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_registrarLayout.createSequentialGroup()
+            .addGroup(jPanel_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_eliminarLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
-        jPanel_registrarLayout.setVerticalGroup(
-            jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel_eliminarLayout.setVerticalGroup(
+            jPanel_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 35, Short.MAX_VALUE)
-            .addGroup(jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_registrarLayout.createSequentialGroup()
+            .addGroup(jPanel_eliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_eliminarLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        eliminarUsuario.add(jPanel_registrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
+        eliminarUsuario.add(jPanel_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -163,19 +163,19 @@ public class EliminarUsuario extends javax.swing.JPanel {
         eliminarUsuario.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
-    private void jLabel_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_eliminarMouseClicked
+    private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
         //Eliminar el usuario
-    }//GEN-LAST:event_jLabel_eliminarMouseClicked
+    }//GEN-LAST:event_jLabel_registrarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel eliminarUsuario;
     private javax.swing.JLabel jLabel_Titulo;
-    private javax.swing.JLabel jLabel_eliminar;
     private javax.swing.JLabel jLabel_menu;
+    private javax.swing.JLabel jLabel_registrar;
     private javax.swing.JLabel jLabel_rut;
+    private javax.swing.JPanel jPanel_eliminar;
     private javax.swing.JPanel jPanel_menu;
-    private javax.swing.JPanel jPanel_registrar;
     private javax.swing.JSeparator jSeparator_rut;
     private javax.swing.JTextField jTextField_rut;
     // End of variables declaration//GEN-END:variables

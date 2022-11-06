@@ -169,7 +169,7 @@ public class Menu_admin extends javax.swing.JPanel {
         jLabel_Titulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Titulo.setText("Menu");
+        jLabel_Titulo.setText("Menu Vendedor");
         menu.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 56, 200, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

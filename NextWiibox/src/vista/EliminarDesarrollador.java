@@ -8,12 +8,12 @@ package vista;
  *
  * @author thoma
  */
-public class EliminarUsuario extends javax.swing.JPanel {
+public class EliminarDesarrollador extends javax.swing.JPanel {
 
     /**
      * Creates new form EliminarUsuario
      */
-    public EliminarUsuario() {
+    public EliminarDesarrollador() {
         initComponents();
     }
 
@@ -43,7 +43,7 @@ public class EliminarUsuario extends javax.swing.JPanel {
         jLabel_Titulo.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_Titulo.setText("Eliminar Usuario");
+        jLabel_Titulo.setText("Eliminar Desarrollador");
         eliminarUsuario.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
         jLabel_rut.setBackground(new java.awt.Color(255, 255, 255));
@@ -55,7 +55,7 @@ public class EliminarUsuario extends javax.swing.JPanel {
 
         jTextField_rut.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_rut.setText("00.000.000-K");
+        jTextField_rut.setText("11.111.111-1");
         jTextField_rut.setBorder(null);
         eliminarUsuario.add(jTextField_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
         eliminarUsuario.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));

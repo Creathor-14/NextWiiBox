@@ -79,7 +79,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
 
         jTextField_rut.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_rut.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_rut.setText("00.000.000-K");
+        jTextField_rut.setText("22.222.222-2");
         jTextField_rut.setBorder(null);
 
         jLabel_nombre.setBackground(new java.awt.Color(255, 255, 255));
@@ -101,7 +101,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
 
         jTextField_correo.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_correo.setText("correoFalso@dominioFalso.cl");
+        jTextField_correo.setText("correoFalso2@dominioFalso.cl");
         jTextField_correo.setBorder(null);
 
         jLabel_direccion.setBackground(new java.awt.Color(255, 255, 255));
