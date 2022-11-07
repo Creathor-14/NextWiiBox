@@ -305,7 +305,7 @@ public class EliminarArriendo extends javax.swing.JPanel {
 
 
         try{
-            Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
+            //Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
             JOptionPane.showMessageDialog(null,"Usuario ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());

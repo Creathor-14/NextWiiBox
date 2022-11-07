@@ -241,9 +241,11 @@ public class IngresarArriendo extends javax.swing.JPanel {
         String codigoVideoJuego = jTextField_codigoVideoJuego.getText();
         verificarCamposEnBlanco(codigoVideoJuego, "codigoVideoJuego");
 
+        String fechaI="";
+        String fechaE="";
 
         try{
-            Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
+            Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente, fechaI, fechaE);
             JOptionPane.showMessageDialog(null,"Usuario ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());

@@ -153,7 +153,7 @@ public class Impl_prueba implements SistemaI{
         Vendedor v = new Vendedor(fono, rut, nombre, direccion, correo);
         return lVendedor.add(v);
     }
-    public boolean ingresarArriendo(String codigo, String rutUsuario){
+    public boolean ingresarArriendo(String codigo, String rutUsuario,String fechaI, String fechaE){
         int codigoVideojuego;
         try{
             codigoVideojuego= Integer.valueOf(codigo);
@@ -175,7 +175,7 @@ public class Impl_prueba implements SistemaI{
         int posicionU = -1;
         for(int i=0;i<lUsuario.size();i++){
             Usuario u= lUsuario.get(i);
-                if(u.getRut().equals(rutUsuario)){
+                if(u.getRut().equalsIgnoreCase(rutUsuario)){
                     posicionU = i;
                     break;
                 }
@@ -183,7 +183,20 @@ public class Impl_prueba implements SistemaI{
         if(posicionU == -1){
             throw new NullPointerException("No usuario con este rut.");
         }
-        Arriendo a = new Arriendo(lVideojugo.get(posicionV), lUsuario.get(posicionU));
+        Fecha fecha_arriendo;
+        try{
+            fecha_arriendo=new Fecha(fechaI);
+        }catch(Exception e){
+            throw new NullPointerException(e.getMessage());
+        }
+        
+        Fecha fecha_entrega;
+        try{
+            fecha_entrega=new Fecha(fechaE);
+        }catch(Exception e){
+            throw new NullPointerException(e.getMessage());
+        }
+        Arriendo a = new Arriendo(lVideojugo.get(posicionV), lUsuario.get(posicionU),fecha_arriendo,fecha_entrega);
         lArriendo.add(a);
         lVideojugo.remove(posicionV);
         return true;
@@ -232,5 +245,21 @@ public class Impl_prueba implements SistemaI{
             }
         }
         return false;
+    }
+    public void actualizarUsuario(int posicionUsuario,String fechaN, String comuna, String telefono, String rut, String nombre, String direccion, String correo){
+        Usuario u = lUsuario.get(posicionUsuario);
+        Fecha f;
+        try{
+            f=new Fecha(fechaN);
+        }catch(Exception e){
+            throw new NullPointerException(e.getMessage());
+        }
+        u.setFechaN(f);
+        u.setComuna(comuna);
+        u.setTelefono(telefono);
+        u.setRut(rut);
+        u.setNombre(nombre);
+        u.setDireccion(direccion);
+        u.setCorreo(correo);
     }
 }
