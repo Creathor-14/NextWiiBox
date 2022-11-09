@@ -292,6 +292,15 @@ public class ActualizarUsuario extends javax.swing.JPanel {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
+        Adm_Usuario Adm_Usuario = new Adm_Usuario();
+        Adm_Usuario.setSize(660, 460);
+        Adm_Usuario.setLocation(0,0);
+        
+        //actualizarUsuario.removeAll();
+        
+        
+
+        
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked

@@ -8,14 +8,16 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author thoma
+ * @author reeso
  */
-public class EliminarArriendo extends javax.swing.JPanel {
+public class ActualizarArriendo extends javax.swing.JPanel {
+    
+
     int posicion_usuario = -1;
     /**
      * Creates new form IngresarUsuario
      */
-    public EliminarArriendo() {
+    public ActualizarArriendo() {
         initComponents();
         jTextField_codigoVideoJuego.setVisible(false);
         jLabel_codigo.setVisible(false);
@@ -32,6 +34,7 @@ public class EliminarArriendo extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        actualizarArriendo = new javax.swing.JPanel();
         eliminarArriendo = new javax.swing.JPanel();
         jLabel_Titulo = new javax.swing.JLabel();
         jLabel_rut = new javax.swing.JLabel();
@@ -48,12 +51,11 @@ public class EliminarArriendo extends javax.swing.JPanel {
         jLabel_registrar = new javax.swing.JLabel();
         jComboBox_videojuegos = new javax.swing.JComboBox<>();
 
-        setMaximumSize(new java.awt.Dimension(138, 25));
-        setMinimumSize(new java.awt.Dimension(138, 25));
-        setPreferredSize(new java.awt.Dimension(610, 460));
+        actualizarArriendo.setMaximumSize(new java.awt.Dimension(138, 25));
+        actualizarArriendo.setMinimumSize(new java.awt.Dimension(138, 25));
+        actualizarArriendo.setPreferredSize(new java.awt.Dimension(610, 460));
 
         eliminarArriendo.setBackground(new java.awt.Color(51, 51, 51));
-        eliminarArriendo.setMinimumSize(new java.awt.Dimension(0, 0));
         eliminarArriendo.setPreferredSize(new java.awt.Dimension(610, 460));
         eliminarArriendo.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -263,21 +265,42 @@ public class EliminarArriendo extends javax.swing.JPanel {
                     .addContainerGap(215, Short.MAX_VALUE)))
         );
 
+        javax.swing.GroupLayout actualizarArriendoLayout = new javax.swing.GroupLayout(actualizarArriendo);
+        actualizarArriendo.setLayout(actualizarArriendoLayout);
+        actualizarArriendoLayout.setHorizontalGroup(
+            actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+            .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(eliminarArriendo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        actualizarArriendoLayout.setVerticalGroup(
+            actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 460, Short.MAX_VALUE)
+            .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(actualizarArriendoLayout.createSequentialGroup()
+                    .addGap(0, 0, 0)
+                    .addComponent(eliminarArriendo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 660, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(eliminarArriendo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(actualizarArriendo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 460, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, 0)
-                    .addComponent(eliminarArriendo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(actualizarArriendo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -292,34 +315,6 @@ public class EliminarArriendo extends javax.swing.JPanel {
         eliminarArriendo.revalidate();
         eliminarArriendo.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked
-    /**
-     * Este boton hace el control de error para los diferentes inputs del usuario llamando a la funcion de abajo.
-     * @param evt 
-     */
-    private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        String rutCliente = jTextField_rutCliente.getText();
-        verificarCamposEnBlanco(rutCliente, "rutCliente");
-        
-        String codigoVideoJuego = jTextField_codigoVideoJuego.getText();
-        verificarCamposEnBlanco(codigoVideoJuego, "codigoVideoJuego");
-
-
-        try{
-            //Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
-            JOptionPane.showMessageDialog(null,"Usuario ingresado.");
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null,e.getMessage());
-            
-        }
-    }//GEN-LAST:event_jLabel_registrarMouseClicked
-    public void verificarCamposEnBlanco(String campo,String nombre){
-        if(campo.equals("")){
-            JOptionPane.showMessageDialog(null,"El/La "+nombre+" no puede estar en blanco.");
-        }
-    }
-    private void eliminarArriendoMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarArriendoMouseDragged
-        //BORRAR
-    }//GEN-LAST:event_eliminarArriendoMouseDragged
 
     private void jLabel_registrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrar1MouseClicked
         String rutCliente = jTextField_rutCliente.getText();
@@ -333,8 +328,33 @@ public class EliminarArriendo extends javax.swing.JPanel {
             jSeparator_codigo.setVisible(true);
             jComboBox_videojuegos.setVisible(true);
         }
-        
+
     }//GEN-LAST:event_jLabel_registrar1MouseClicked
+
+    private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
+        String rutCliente = jTextField_rutCliente.getText();
+        verificarCamposEnBlanco(rutCliente, "rutCliente");
+
+        String codigoVideoJuego = jTextField_codigoVideoJuego.getText();
+        verificarCamposEnBlanco(codigoVideoJuego, "codigoVideoJuego");
+
+        try{
+            //Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
+            JOptionPane.showMessageDialog(null,"Usuario ingresado.");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage());
+
+        }
+    }//GEN-LAST:event_jLabel_registrarMouseClicked
+    
+    public void verificarCamposEnBlanco(String campo,String nombre){
+        if(campo.equals("")){
+            JOptionPane.showMessageDialog(null,"El/La "+nombre+" no puede estar en blanco.");
+        }
+    }
+    private void eliminarArriendoMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarArriendoMouseDragged
+        //BORRAR
+    }//GEN-LAST:event_eliminarArriendoMouseDragged
 
     private void jComboBox_videojuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_videojuegosActionPerformed
         // TODO add your handling code here:
@@ -342,6 +362,7 @@ public class EliminarArriendo extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel actualizarArriendo;
     private javax.swing.JPanel eliminarArriendo;
     private javax.swing.JComboBox<String> jComboBox_videojuegos;
     private javax.swing.JLabel jLabel_Titulo;

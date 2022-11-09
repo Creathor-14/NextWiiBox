@@ -287,12 +287,12 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_administrador menu = new Menu_administrador();
-        menu.setSize(660, 460);
-        menu.setLocation(0,0);
+        Adm_Desarrollador Adm_Desarrollador = new Adm_Desarrollador();
+        Adm_Desarrollador.setSize(660, 460);
+        Adm_Desarrollador.setLocation(0,0);
 
         ingresarDesarrollador.removeAll();
-        ingresarDesarrollador.add(menu,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarDesarrollador.add(Adm_Desarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         ingresarDesarrollador.revalidate();
         ingresarDesarrollador.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked

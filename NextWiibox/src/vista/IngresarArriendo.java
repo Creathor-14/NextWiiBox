@@ -221,12 +221,12 @@ public class IngresarArriendo extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_vendedor menu_admin = new Menu_vendedor();
-        menu_admin.setSize(660, 460);
-        menu_admin.setLocation(0,0);
+        Menu_vendedor Menu_vendedor = new Menu_vendedor();
+        Menu_vendedor.setSize(660, 460);
+        Menu_vendedor.setLocation(0,0);
 
         ingresarUsuario.removeAll();
-        ingresarUsuario.add(menu_admin,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarUsuario.add(Menu_vendedor,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         ingresarUsuario.revalidate();
         ingresarUsuario.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked
