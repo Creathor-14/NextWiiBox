@@ -138,7 +138,7 @@ public class Adm_Usuario extends javax.swing.JPanel {
         jLabel_Acceder3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Acceder3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Acceder3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Acceder3.setText("Cerrar Sesión");
+        jLabel_Acceder3.setText("ATRAS");
         jLabel_Acceder3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_Acceder3MouseClicked(evt);
@@ -184,12 +184,12 @@ public class Adm_Usuario extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_AccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_AccederMouseClicked
-        IngresarArriendo ingresarArriendo = new IngresarArriendo();
-        ingresarArriendo.setSize(660, 460);
-        ingresarArriendo.setLocation(0,0);
+        IngresarUsuario ingresarUsuario = new IngresarUsuario();
+        ingresarUsuario.setSize(660, 460);
+        ingresarUsuario.setLocation(0,0);
 
         usuario.removeAll();
-        usuario.add(ingresarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        usuario.add(ingresarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         usuario.revalidate();
         usuario.repaint();
     }//GEN-LAST:event_jLabel_AccederMouseClicked
@@ -206,23 +206,23 @@ public class Adm_Usuario extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_Acceder1MouseClicked
 
     private void jLabel_Acceder2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder2MouseClicked
-        EliminarArriendo eliminarArriendo = new EliminarArriendo();
-        eliminarArriendo.setSize(660, 460);
-        eliminarArriendo.setLocation(0,0);
+        EliminarUsuario eliminarUsuario = new EliminarUsuario();
+        eliminarUsuario.setSize(660, 460);
+        eliminarUsuario.setLocation(0,0);
 
         usuario.removeAll();
-        usuario.add(eliminarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        usuario.add(eliminarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         usuario.revalidate();
         usuario.repaint();
     }//GEN-LAST:event_jLabel_Acceder2MouseClicked
 
     private void jLabel_Acceder3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder3MouseClicked
-        Login login = new Login();
-        login.setSize(660, 460);
-        login.setLocation(0,0);
+        Menu_administrador Menu_administrador = new Menu_administrador();
+        Menu_administrador.setSize(660, 460);
+        Menu_administrador.setLocation(0,0);
 
         usuario.removeAll();
-        usuario.add(login,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        usuario.add(Menu_administrador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         usuario.revalidate();
         usuario.repaint();
 

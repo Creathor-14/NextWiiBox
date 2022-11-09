@@ -157,7 +157,7 @@ public class IngresarUsuario extends javax.swing.JPanel {
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu");
+        jLabel_menu.setText("ATRAS");
         jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_menuMouseClicked(evt);
@@ -351,12 +351,12 @@ public class IngresarUsuario extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_administrador menu = new Menu_administrador();
-        menu.setSize(660, 460);
-        menu.setLocation(0,0);
+        Adm_Usuario Adm_Usuario = new Adm_Usuario();
+        Adm_Usuario.setSize(660, 460);
+        Adm_Usuario.setLocation(0,0);
 
         ingresarUsuario.removeAll();
-        ingresarUsuario.add(menu,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarUsuario.add(Adm_Usuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         ingresarUsuario.revalidate();
         ingresarUsuario.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked

@@ -138,7 +138,7 @@ public class Adm_Desarrollador extends javax.swing.JPanel {
         jLabel_Acceder3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Acceder3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Acceder3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Acceder3.setText("Cerrar Sesión");
+        jLabel_Acceder3.setText("ATRAS");
         jLabel_Acceder3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_Acceder3MouseClicked(evt);
@@ -184,45 +184,45 @@ public class Adm_Desarrollador extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_AccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_AccederMouseClicked
-        IngresarArriendo ingresarArriendo = new IngresarArriendo();
-        ingresarArriendo.setSize(660, 460);
-        ingresarArriendo.setLocation(0,0);
+        IngresarDesarrollador ingresarDesarrollador = new IngresarDesarrollador();
+        ingresarDesarrollador.setSize(660, 460);
+        ingresarDesarrollador.setLocation(0,0);
 
         desarrollador.removeAll();
-        desarrollador.add(ingresarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        desarrollador.add(ingresarDesarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         desarrollador.revalidate();
         desarrollador.repaint();
     }//GEN-LAST:event_jLabel_AccederMouseClicked
 
     private void jLabel_Acceder1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder1MouseClicked
-        ActualizarUsuario actualizarUsuario = new ActualizarUsuario();
-        actualizarUsuario.setSize(660, 460);
-        actualizarUsuario.setLocation(0,0);
+        ActualizarDesarrollador actualizarDesarrollador = new ActualizarDesarrollador();
+        actualizarDesarrollador.setSize(660, 460);
+        actualizarDesarrollador.setLocation(0,0);
 
         desarrollador.removeAll();
-        desarrollador.add(actualizarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        desarrollador.add(actualizarDesarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         desarrollador.revalidate();
         desarrollador.repaint();
     }//GEN-LAST:event_jLabel_Acceder1MouseClicked
 
     private void jLabel_Acceder2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder2MouseClicked
-        EliminarArriendo eliminarArriendo = new EliminarArriendo();
-        eliminarArriendo.setSize(660, 460);
-        eliminarArriendo.setLocation(0,0);
+        EliminarDesarrollador eliminarDesarrollador = new EliminarDesarrollador();
+        eliminarDesarrollador.setSize(660, 460);
+        eliminarDesarrollador.setLocation(0,0);
 
         desarrollador.removeAll();
-        desarrollador.add(eliminarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        desarrollador.add(eliminarDesarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         desarrollador.revalidate();
         desarrollador.repaint();
     }//GEN-LAST:event_jLabel_Acceder2MouseClicked
 
     private void jLabel_Acceder3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder3MouseClicked
-        Login login = new Login();
-        login.setSize(660, 460);
-        login.setLocation(0,0);
+        Menu_administrador Menu_administrador = new Menu_administrador();
+        Menu_administrador.setSize(660, 460);
+        Menu_administrador.setLocation(0,0);
 
         desarrollador.removeAll();
-        desarrollador.add(login,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        desarrollador.add(Menu_administrador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         desarrollador.revalidate();
         desarrollador.repaint();
     }//GEN-LAST:event_jLabel_Acceder3MouseClicked

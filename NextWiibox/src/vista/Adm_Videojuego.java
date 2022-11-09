@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package vista;
 
 /**
@@ -138,7 +134,7 @@ public class Adm_Videojuego extends javax.swing.JPanel {
         jLabel_Acceder3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Acceder3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Acceder3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Acceder3.setText("Cerrar Sesión");
+        jLabel_Acceder3.setText("ATRAS");
         jLabel_Acceder3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_Acceder3MouseClicked(evt);
@@ -184,45 +180,46 @@ public class Adm_Videojuego extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_AccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_AccederMouseClicked
-        IngresarArriendo ingresarArriendo = new IngresarArriendo();
-        ingresarArriendo.setSize(660, 460);
-        ingresarArriendo.setLocation(0,0);
+        IngresarVideoJuego ingresarVideoJuego = new IngresarVideoJuego();
+        ingresarVideoJuego.setSize(660, 460);
+        ingresarVideoJuego.setLocation(0,0);
 
         videojuego.removeAll();
-        videojuego.add(ingresarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        videojuego.add(ingresarVideoJuego,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         videojuego.revalidate();
         videojuego.repaint();
     }//GEN-LAST:event_jLabel_AccederMouseClicked
 
     private void jLabel_Acceder1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder1MouseClicked
-        ActualizarUsuario actualizarUsuario = new ActualizarUsuario();
-        actualizarUsuario.setSize(660, 460);
-        actualizarUsuario.setLocation(0,0);
+        ActualizarVideojuego actualizarVideoJuego = new ActualizarVideojuego();
+        actualizarVideoJuego.setSize(660, 460);
+        actualizarVideoJuego.setLocation(0,0);
 
         videojuego.removeAll();
-        videojuego.add(actualizarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        videojuego.add(actualizarVideoJuego,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         videojuego.revalidate();
         videojuego.repaint();
     }//GEN-LAST:event_jLabel_Acceder1MouseClicked
 
     private void jLabel_Acceder2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder2MouseClicked
-        EliminarArriendo eliminarArriendo = new EliminarArriendo();
-        eliminarArriendo.setSize(660, 460);
-        eliminarArriendo.setLocation(0,0);
+        EliminarVideoJuego eliminarVideojuego = new EliminarVideoJuego();
+        eliminarVideojuego.setSize(660, 460);
+        eliminarVideojuego.setLocation(0,0);
 
         videojuego.removeAll();
-        videojuego.add(eliminarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        videojuego.add(eliminarVideojuego,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         videojuego.revalidate();
         videojuego.repaint();
     }//GEN-LAST:event_jLabel_Acceder2MouseClicked
 
     private void jLabel_Acceder3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder3MouseClicked
-        Login login = new Login();
-        login.setSize(660, 460);
-        login.setLocation(0,0);
+        Menu_administrador Menu_administrador = new Menu_administrador();
+        Menu_administrador.setSize(660, 460);
+        Menu_administrador.setLocation(0,0);
+
 
         videojuego.removeAll();
-        videojuego.add(login,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        videojuego.add(Menu_administrador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         videojuego.revalidate();
         videojuego.repaint();
 

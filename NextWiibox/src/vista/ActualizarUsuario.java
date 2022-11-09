@@ -53,6 +53,8 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         jLabel_buscar = new javax.swing.JLabel();
         jPanel_actualizar = new javax.swing.JPanel();
         jLabel_actualizar = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         jPanel_actusuario.setBackground(new java.awt.Color(51, 51, 51));
         jPanel_actusuario.setForeground(new java.awt.Color(51, 51, 51));
@@ -215,6 +217,32 @@ public class ActualizarUsuario extends javax.swing.JPanel {
 
         jPanel_actusuario.add(jPanel_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, -1, -1));
 
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
+
+        jLabel1.setText("          ATRAS");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        jPanel_actusuario.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 110, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -262,8 +290,17 @@ public class ActualizarUsuario extends javax.swing.JPanel {
         //BORRAR
     }//GEN-LAST:event_actualizarUsuarioMouseDragged
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JLabel jLabel_actualizar;
     private javax.swing.JLabel jLabel_buscar;
@@ -274,6 +311,7 @@ public class ActualizarUsuario extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel_nombre;
     private javax.swing.JLabel jLabel_rut;
     private javax.swing.JLabel jLabel_telefono;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel_actualizar;
     private javax.swing.JPanel jPanel_actusuario;
     private javax.swing.JPanel jPanel_buscar;

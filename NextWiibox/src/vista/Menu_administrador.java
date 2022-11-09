@@ -175,23 +175,31 @@ public class Menu_administrador extends javax.swing.JPanel {
         jLabel_Titulo.setText("Menu Administrador");
         menu.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 200, -1));
 
-        jLabel_desarrollador.setText("DESARROLLADOR");
+        jPanel1_desarrollador.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1_desarrollador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1_desarrolladorMouseClicked(evt);
+            }
+        });
+
+        jLabel_desarrollador.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_desarrollador.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_desarrollador.setText("    DESARROLLADOR");
+        jLabel_desarrollador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_desarrolladorMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1_desarrolladorLayout = new javax.swing.GroupLayout(jPanel1_desarrollador);
         jPanel1_desarrollador.setLayout(jPanel1_desarrolladorLayout);
         jPanel1_desarrolladorLayout.setHorizontalGroup(
             jPanel1_desarrolladorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1_desarrolladorLayout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
-                .addComponent(jLabel_desarrollador)
-                .addGap(40, 40, 40))
+            .addComponent(jLabel_desarrollador, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
         );
         jPanel1_desarrolladorLayout.setVerticalGroup(
             jPanel1_desarrolladorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1_desarrolladorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_desarrollador)
-                .addContainerGap(18, Short.MAX_VALUE))
+            .addComponent(jLabel_desarrollador, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
         menu.add(jPanel1_desarrollador, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 200, 40));
@@ -224,37 +232,53 @@ public class Menu_administrador extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_Acceder3MouseClicked
 
     private void jLabel_videojuegoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_videojuegoMouseClicked
-        EliminarUsuario eliminarUsuario = new EliminarUsuario();
-        eliminarUsuario.setSize(660, 460);
-        eliminarUsuario.setLocation(0,0);
+        Adm_Videojuego adm_Videojuego = new Adm_Videojuego();
+        adm_Videojuego.setSize(660, 460);
+        adm_Videojuego.setLocation(0,0);
 
         menu.removeAll();
-        menu.add(eliminarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        menu.add(adm_Videojuego,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         menu.revalidate();
         menu.repaint();
     }//GEN-LAST:event_jLabel_videojuegoMouseClicked
 
     private void jLabel_vendedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_vendedorMouseClicked
-        ActualizarUsuario actualizarUsuario = new ActualizarUsuario();
-        actualizarUsuario.setSize(660, 460);
-        actualizarUsuario.setLocation(0,0);
+        Adm_Vendedor adm_Vendedor = new Adm_Vendedor();
+        adm_Vendedor.setSize(660, 460);
+        adm_Vendedor.setLocation(0,0);
 
         menu.removeAll();
-        menu.add(actualizarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        menu.add(adm_Vendedor,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         menu.revalidate();
         menu.repaint();
     }//GEN-LAST:event_jLabel_vendedorMouseClicked
 
     private void jLabel_usuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_usuarioMouseClicked
-        IngresarUsuario ingresarUsuario = new IngresarUsuario();
-        ingresarUsuario.setSize(660, 460);
-        ingresarUsuario.setLocation(0,0);
+        Adm_Usuario adm_Usuario = new Adm_Usuario();
+        adm_Usuario.setSize(660, 460);
+        adm_Usuario.setLocation(0,0);
 
         menu.removeAll();
-        menu.add(ingresarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        menu.add(adm_Usuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         menu.revalidate();
         menu.repaint();
     }//GEN-LAST:event_jLabel_usuarioMouseClicked
+
+    private void jPanel1_desarrolladorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1_desarrolladorMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel1_desarrolladorMouseClicked
+
+    private void jLabel_desarrolladorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_desarrolladorMouseClicked
+        // TODO add your handling code here:
+        Adm_Desarrollador adm_Desarrollador = new Adm_Desarrollador();
+        adm_Desarrollador.setSize(660, 460);
+        adm_Desarrollador.setLocation(0,0);
+
+        menu.removeAll();
+        menu.add(adm_Desarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        menu.revalidate();
+        menu.repaint();
+    }//GEN-LAST:event_jLabel_desarrolladorMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
