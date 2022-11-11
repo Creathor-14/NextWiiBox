@@ -142,7 +142,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu");
+        jLabel_menu.setText("Atras");
         jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_menuMouseClicked(evt);
@@ -264,7 +264,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
                                         .addComponent(jLabel_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(10, 10, 10)
                                         .addComponent(jTextField_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
         ingresarVendedorLayout.setVerticalGroup(
             ingresarVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -317,20 +317,19 @@ public class IngresarVendedor extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(ingresarVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 34, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_administrador menu = new Menu_administrador();
-        menu.setSize(660, 460);
-        menu.setLocation(0,0);
+        Adm_Vendedor adm_Vendedor = new Adm_Vendedor();
+        adm_Vendedor.setSize(660, 460);
+        adm_Vendedor.setLocation(0,0);
 
         ingresarVendedor.removeAll();
-        ingresarVendedor.add(menu,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarVendedor.add(adm_Vendedor,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         ingresarVendedor.revalidate();
         ingresarVendedor.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked

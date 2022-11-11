@@ -351,12 +351,12 @@ public class IngresarUsuario extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Adm_Usuario Adm_Usuario = new Adm_Usuario();
-        Adm_Usuario.setSize(660, 460);
-        Adm_Usuario.setLocation(0,0);
+        Adm_Usuario adm_usuario = new Adm_Usuario();
+        adm_usuario.setSize(660, 460);
+        adm_usuario.setLocation(0,0);
 
         ingresarUsuario.removeAll();
-        ingresarUsuario.add(Adm_Usuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarUsuario.add(adm_usuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         ingresarUsuario.revalidate();
         ingresarUsuario.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked

@@ -155,12 +155,12 @@ public class EliminarVendedor extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_administrador menu = new Menu_administrador();
-        menu.setSize(660, 460);
-        menu.setLocation(0,0);
+        Adm_Vendedor adm_Vendedor = new Adm_Vendedor();
+        adm_Vendedor.setSize(660, 460);
+        adm_Vendedor.setLocation(0,0);
 
         eliminarUsuario.removeAll();
-        eliminarUsuario.add(menu,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        eliminarUsuario.add(adm_Vendedor,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         eliminarUsuario.revalidate();
         eliminarUsuario.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked

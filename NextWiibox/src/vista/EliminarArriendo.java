@@ -93,7 +93,7 @@ public class EliminarArriendo extends javax.swing.JPanel {
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu Admin");
+        jLabel_menu.setText("Atras");
         jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_menuMouseClicked(evt);
@@ -324,7 +324,7 @@ public class EliminarArriendo extends javax.swing.JPanel {
     private void jLabel_registrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrar1MouseClicked
         String rutCliente = jTextField_rutCliente.getText();
         verificarCamposEnBlanco(rutCliente, "rutCliente");
-        posicion_usuario = Visualizador.sistema.existeUsuario(rutCliente);
+        posicion_usuario = Visualizador.sistema.buscarUsuario(rutCliente);
         if(posicion_usuario == -1){
             JOptionPane.showMessageDialog(null,"No existe un usuario con este rut.");
         }else{

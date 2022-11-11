@@ -31,9 +31,6 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
         jLabel_rut = new javax.swing.JLabel();
         jTextField_rut = new javax.swing.JTextField();
         jSeparator_rut = new javax.swing.JSeparator();
-        jLabel_correo = new javax.swing.JLabel();
-        jTextField_correo = new javax.swing.JTextField();
-        jSeparator_correo = new javax.swing.JSeparator();
         jLabel_Nombre = new javax.swing.JLabel();
         jTextField_Nombre = new javax.swing.JTextField();
         jSeparator_Nombre = new javax.swing.JSeparator();
@@ -47,6 +44,8 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
         jLabel_buscar = new javax.swing.JLabel();
         jPanel_actualizar = new javax.swing.JPanel();
         jLabel_actualizar = new javax.swing.JLabel();
+        jPanel_menu = new javax.swing.JPanel();
+        jLabel_menu = new javax.swing.JLabel();
 
         jPanel_actdesarrollador.setBackground(new java.awt.Color(51, 51, 51));
         jPanel_actdesarrollador.setForeground(new java.awt.Color(51, 51, 51));
@@ -72,19 +71,6 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
         jPanel_actdesarrollador.add(jTextField_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
         jPanel_actdesarrollador.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));
 
-        jLabel_correo.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_correo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_correo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_correo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_correo.setText("Correo:");
-        jPanel_actdesarrollador.add(jLabel_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 130, -1));
-
-        jTextField_correo.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_correo.setBorder(null);
-        jPanel_actdesarrollador.add(jTextField_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 270, -1));
-        jPanel_actdesarrollador.add(jSeparator_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 270, 10));
-
         jLabel_Nombre.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_Nombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_Nombre.setForeground(new java.awt.Color(255, 255, 255));
@@ -103,7 +89,7 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
         jLabel_comuna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_comuna.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_comuna.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_comuna.setText("Comuna:");
+        jLabel_comuna.setText("Direccion:");
         jPanel_actdesarrollador.add(jLabel_comuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 130, -1));
 
         jTextField_comuna.setBackground(new java.awt.Color(51, 51, 51));
@@ -116,7 +102,7 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
         jLabel_telefono.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_telefono.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_telefono.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_telefono.setText("Telefono:");
+        jLabel_telefono.setText("Fono:");
         jPanel_actdesarrollador.add(jLabel_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 130, -1));
 
         jTextField_telefono.setBackground(new java.awt.Color(51, 51, 51));
@@ -183,6 +169,41 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
 
         jPanel_actdesarrollador.add(jPanel_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
 
+        jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_menu.setText("Atras");
+        jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_menuMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_menuLayout = new javax.swing.GroupLayout(jPanel_menu);
+        jPanel_menu.setLayout(jPanel_menuLayout);
+        jPanel_menuLayout.setHorizontalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel_menuLayout.setVerticalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel_actdesarrollador.add(jPanel_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -211,19 +232,28 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
 
     private void jLabel_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_buscarMouseClicked
         //Buscar al usuario segun el rut
-        String [] datosDesarrollador = new String[5];
-        String correo = datosDesarrollador[0];
+        String [] datosDesarrollador = new String[3];
         String nombre = datosDesarrollador[1];
-        String comuna = datosDesarrollador[2];
         String direccion = datosDesarrollador[3];
-        String telefono = datosDesarrollador[4];
+        String fono = datosDesarrollador[4];
         
-        jTextField_Nombre.setText(correo);
-        jTextField_correo.setText(nombre);
-        jTextField_comuna.setText(comuna);
-        jTextField_telefono.setText(direccion);
+        jTextField_Nombre.setText(nombre);
+        
+        jTextField_comuna.setText(direccion);
+        jTextField_telefono.setText(fono);
         
     }//GEN-LAST:event_jLabel_buscarMouseClicked
+
+    private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
+        Adm_Desarrollador adm_Desarrollador = new Adm_Desarrollador();
+        adm_Desarrollador.setSize(660, 460);
+        adm_Desarrollador.setLocation(0,0);
+
+        jPanel_actdesarrollador.removeAll();
+        jPanel_actdesarrollador.add(adm_Desarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        jPanel_actdesarrollador.revalidate();
+        jPanel_actdesarrollador.repaint();
+    }//GEN-LAST:event_jLabel_menuMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -232,20 +262,19 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel_actualizar;
     private javax.swing.JLabel jLabel_buscar;
     private javax.swing.JLabel jLabel_comuna;
-    private javax.swing.JLabel jLabel_correo;
+    private javax.swing.JLabel jLabel_menu;
     private javax.swing.JLabel jLabel_rut;
     private javax.swing.JLabel jLabel_telefono;
     private javax.swing.JPanel jPanel_actdesarrollador;
     private javax.swing.JPanel jPanel_actualizar;
     private javax.swing.JPanel jPanel_buscar;
+    private javax.swing.JPanel jPanel_menu;
     private javax.swing.JSeparator jSeparator_Nombre;
     private javax.swing.JSeparator jSeparator_comuna;
-    private javax.swing.JSeparator jSeparator_correo;
     private javax.swing.JSeparator jSeparator_rut;
     private javax.swing.JSeparator jSeparator_telefono;
     private javax.swing.JTextField jTextField_Nombre;
     private javax.swing.JTextField jTextField_comuna;
-    private javax.swing.JTextField jTextField_correo;
     private javax.swing.JTextField jTextField_rut;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables

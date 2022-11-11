@@ -55,6 +55,8 @@ public class ActualizarVideojuego extends javax.swing.JPanel {
         jLabel_actualizar = new javax.swing.JLabel();
         jLabel_fNac1 = new javax.swing.JLabel();
         jSeparator_fNac1 = new javax.swing.JSeparator();
+        jPanel_menu1 = new javax.swing.JPanel();
+        jLabel_menu1 = new javax.swing.JLabel();
 
         jPanel_actvideojuego.setBackground(new java.awt.Color(51, 51, 51));
         jPanel_actvideojuego.setForeground(new java.awt.Color(51, 51, 51));
@@ -225,6 +227,41 @@ public class ActualizarVideojuego extends javax.swing.JPanel {
         jPanel_actvideojuego.add(jLabel_fNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 130, -1));
         jPanel_actvideojuego.add(jSeparator_fNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 270, 10));
 
+        jPanel_menu1.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_menu1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_menu1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_menu1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_menu1.setText("Atras");
+        jLabel_menu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_menu1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_menu1Layout = new javax.swing.GroupLayout(jPanel_menu1);
+        jPanel_menu1.setLayout(jPanel_menu1Layout);
+        jPanel_menu1Layout.setHorizontalGroup(
+            jPanel_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menu1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel_menu1Layout.setVerticalGroup(
+            jPanel_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+            .addGroup(jPanel_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menu1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel_actvideojuego.add(jPanel_menu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -273,6 +310,17 @@ public class ActualizarVideojuego extends javax.swing.JPanel {
         // Guardar los datos nuevos
     }//GEN-LAST:event_jLabel_actualizarMouseClicked
 
+    private void jLabel_menu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menu1MouseClicked
+        Adm_Videojuego adm_Videojuego = new Adm_Videojuego();
+        adm_Videojuego.setSize(660, 460);
+        adm_Videojuego.setLocation(0,0);
+
+        jPanel_actvideojuego.removeAll();
+        jPanel_actvideojuego.add(adm_Videojuego,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        jPanel_actvideojuego.revalidate();
+        jPanel_actvideojuego.repaint();
+    }//GEN-LAST:event_jLabel_menu1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel_Titulo;
@@ -283,12 +331,16 @@ public class ActualizarVideojuego extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel_direccion;
     private javax.swing.JLabel jLabel_fNac;
     private javax.swing.JLabel jLabel_fNac1;
+    private javax.swing.JLabel jLabel_menu;
+    private javax.swing.JLabel jLabel_menu1;
     private javax.swing.JLabel jLabel_nombre;
     private javax.swing.JLabel jLabel_rut;
     private javax.swing.JLabel jLabel_telefono;
     private javax.swing.JPanel jPanel_actualizar;
     private javax.swing.JPanel jPanel_actvideojuego;
     private javax.swing.JPanel jPanel_buscar;
+    private javax.swing.JPanel jPanel_menu;
+    private javax.swing.JPanel jPanel_menu1;
     private javax.swing.JSeparator jSeparator_comuna;
     private javax.swing.JSeparator jSeparator_correo;
     private javax.swing.JSeparator jSeparator_direccion;

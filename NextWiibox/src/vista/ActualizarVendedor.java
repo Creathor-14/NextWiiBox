@@ -33,9 +33,6 @@ public class ActualizarVendedor extends javax.swing.JPanel {
         jLabel_rut = new javax.swing.JLabel();
         jTextField_rut = new javax.swing.JTextField();
         jSeparator_rut = new javax.swing.JSeparator();
-        jLabel_correo = new javax.swing.JLabel();
-        jTextField_Correo = new javax.swing.JTextField();
-        jSeparator_Correo = new javax.swing.JSeparator();
         jLabel_Nombre = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
         jSeparator_nombre = new javax.swing.JSeparator();
@@ -52,6 +49,8 @@ public class ActualizarVendedor extends javax.swing.JPanel {
         jLabel_buscar = new javax.swing.JLabel();
         jPanel_actualizar = new javax.swing.JPanel();
         jLabel_actualizar = new javax.swing.JLabel();
+        jPanel_menu = new javax.swing.JPanel();
+        jLabel_menu = new javax.swing.JLabel();
 
         jPanel_actvendedor.setBackground(new java.awt.Color(51, 51, 51));
         jPanel_actvendedor.setForeground(new java.awt.Color(51, 51, 51));
@@ -76,19 +75,6 @@ public class ActualizarVendedor extends javax.swing.JPanel {
         jTextField_rut.setBorder(null);
         jPanel_actvendedor.add(jTextField_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
         jPanel_actvendedor.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));
-
-        jLabel_correo.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_correo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_correo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_correo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_correo.setText("Correo:");
-        jPanel_actvendedor.add(jLabel_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 130, -1));
-
-        jTextField_Correo.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_Correo.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_Correo.setBorder(null);
-        jPanel_actvendedor.add(jTextField_Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 270, -1));
-        jPanel_actvendedor.add(jSeparator_Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 270, 10));
 
         jLabel_Nombre.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_Nombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -121,7 +107,7 @@ public class ActualizarVendedor extends javax.swing.JPanel {
         jLabel_Telefono.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_Telefono.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Telefono.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_Telefono.setText("Telefono:");
+        jLabel_Telefono.setText("Fono:");
         jPanel_actvendedor.add(jLabel_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 130, -1));
 
         jTextField_Telefono.setBackground(new java.awt.Color(51, 51, 51));
@@ -207,6 +193,41 @@ public class ActualizarVendedor extends javax.swing.JPanel {
 
         jPanel_actvendedor.add(jPanel_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
 
+        jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_menu.setText("Atras");
+        jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_menuMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_menuLayout = new javax.swing.GroupLayout(jPanel_menu);
+        jPanel_menu.setLayout(jPanel_menuLayout);
+        jPanel_menuLayout.setHorizontalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel_menuLayout.setVerticalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel_actvendedor.add(jPanel_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -231,18 +252,17 @@ public class ActualizarVendedor extends javax.swing.JPanel {
 
     private void jLabel_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_buscarMouseClicked
         //Buscar al usuario segun el rut
-        String [] datosVendedor = new String[5];
-        String correo = datosVendedor[0];
-        String nombre = datosVendedor[1];
-        String comuna = datosVendedor[2];
-        String direccion = datosVendedor[3];
-        String telefono = datosVendedor[4];
+        String [] datosVendedor = new String[4];
+
+        String nombre = datosVendedor[0];
+        String direccion = datosVendedor[1];
+        String fono = datosVendedor[2];
+        String clave = datosVendedor[4];
         
-        jTextField_nombre.setText(correo);
-        jTextField_Correo.setText(nombre);
-        jTextField_Direccion.setText(comuna);
-        jTextField_Telefono.setText(direccion);
-        jTextField_clave.setText(telefono);
+        jTextField_nombre.setText(nombre);
+        jTextField_Direccion.setText(direccion);
+        jTextField_Telefono.setText(fono);
+        jTextField_clave.setText(clave);
         
     }//GEN-LAST:event_jLabel_buscarMouseClicked
 
@@ -253,6 +273,17 @@ public class ActualizarVendedor extends javax.swing.JPanel {
     private void jTextField_claveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_claveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_claveActionPerformed
+
+    private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
+        Adm_Vendedor adm_Vendedor = new Adm_Vendedor();
+        adm_Vendedor.setSize(660, 460);
+        adm_Vendedor.setLocation(0,0);
+
+        jPanel_actvendedor.removeAll();
+        jPanel_actvendedor.add(adm_Vendedor,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        jPanel_actvendedor.revalidate();
+        jPanel_actvendedor.repaint();
+    }//GEN-LAST:event_jLabel_menuMouseClicked
     public void verificarCamposEnBlanco(String campo,String nombre){
         if(campo.equals("")){
             JOptionPane.showMessageDialog(null,"El/La "+nombre+" no puede estar en blanco.");
@@ -267,18 +298,17 @@ public class ActualizarVendedor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel_actualizar;
     private javax.swing.JLabel jLabel_buscar;
     private javax.swing.JLabel jLabel_clave;
-    private javax.swing.JLabel jLabel_correo;
+    private javax.swing.JLabel jLabel_menu;
     private javax.swing.JLabel jLabel_rut;
     private javax.swing.JPanel jPanel_actualizar;
     private javax.swing.JPanel jPanel_actvendedor;
     private javax.swing.JPanel jPanel_buscar;
-    private javax.swing.JSeparator jSeparator_Correo;
+    private javax.swing.JPanel jPanel_menu;
     private javax.swing.JSeparator jSeparator_Direccion;
     private javax.swing.JSeparator jSeparator_Telefono;
     private javax.swing.JSeparator jSeparator_clave;
     private javax.swing.JSeparator jSeparator_nombre;
     private javax.swing.JSeparator jSeparator_rut;
-    private javax.swing.JTextField jTextField_Correo;
     private javax.swing.JTextField jTextField_Direccion;
     private javax.swing.JTextField jTextField_Telefono;
     private javax.swing.JTextField jTextField_clave;

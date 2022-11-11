@@ -23,8 +23,8 @@ public class Usuario extends Persona {
           
     } 
 
-    public Fecha getFechaN() {
-        return fechaN;
+    public String getFechaN() {
+        return fechaN.toString();
     }
 
     public void setFechaN(Fecha fechaN) {

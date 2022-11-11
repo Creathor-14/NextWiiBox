@@ -18,6 +18,7 @@ public class Impl_prueba implements SistemaI{
     private List <Vendedor> lVendedor; 
     private List <VideoJuego> lVideojugo; 
     private List <Arriendo> lArriendo; 
+    
     public Impl_prueba(){
         lDesarrollador = new ArrayList<>();
         lUsuario = new ArrayList<>();
@@ -25,6 +26,8 @@ public class Impl_prueba implements SistemaI{
         lVideojugo = new ArrayList<>();
         lArriendo = new ArrayList<>();
     }
+    
+    
     
     public boolean rutUnico(String rut){
         for(Desarrollador d : lDesarrollador){
@@ -44,7 +47,6 @@ public class Impl_prueba implements SistemaI{
         }
         return true;
     }
-    
     public boolean correoUnico(String correo){
         for(Desarrollador d : lDesarrollador){
             if(d.getCorreo().equalsIgnoreCase(correo)){
@@ -63,7 +65,6 @@ public class Impl_prueba implements SistemaI{
         }
         return true;
     }
-    
     @Override
     public boolean login(String usuario,String contraseña){
         //Inicio campos en blanco
@@ -85,6 +86,9 @@ public class Impl_prueba implements SistemaI{
         }
         return false;
     }
+    
+//-------------------------------------INGRESAR-------------------------------------
+    
     public boolean ingresarUsuario(String fechaN, String comuna, String telefono, String rut, String nombre, String direccion, String correo){
     // rut y correo unico
         if(!rutUnico(rut)){
@@ -201,15 +205,9 @@ public class Impl_prueba implements SistemaI{
         lVideojugo.remove(posicionV);
         return true;
     }
-    public int existeUsuario(String rut){
-        for(int i=0;i<lUsuario.size();i++){
-            Usuario u = lUsuario.get(i);
-            if(u.getRut().equalsIgnoreCase(rut)){
-                return i;
-            }
-        }
-        return -1;
-    }
+    
+//-------------------------------------ELIMINAR-------------------------------------
+    
     public boolean eliminarUsuario(String rut){
         for(Usuario u : lUsuario){
             if(u.getRut().equalsIgnoreCase(rut)){
@@ -246,7 +244,49 @@ public class Impl_prueba implements SistemaI{
         }
         return false;
     }
-    public void actualizarUsuario(int posicionUsuario,String fechaN, String comuna, String telefono, String rut, String nombre, String direccion, String correo){
+    
+//-------------------------------------BUSCAR-------------------------------------
+    
+    public int buscarUsuario(String rut){
+        for(int i=0;i<lUsuario.size();i++){
+            Usuario u = lUsuario.get(i);
+            if(u.getRut().equalsIgnoreCase(rut)){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int buscarVendedor(String rut){
+        for(int i=0;i<lVendedor.size();i++){
+            Vendedor u = lVendedor.get(i);
+            if(u.getRut().equalsIgnoreCase(rut)){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int buscarDesarrollador(String rut){
+        for(int i=0;i<lDesarrollador.size();i++){
+            Desarrollador u = lDesarrollador.get(i);
+            if(u.getRut().equalsIgnoreCase(rut)){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int buscarVideoJuego(int codigo){
+        for(int i=0;i<lVideojugo.size();i++){
+            VideoJuego v = lVideojugo.get(i);
+            if(v.getCodigo() == codigo){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+//-------------------------------------ACTUALIZAR-------------------------------------
+    
+    public void actualizarUsuario(int posicionUsuario,String fechaN, String comuna, String telefono, String nombre, String direccion){
         Usuario u = lUsuario.get(posicionUsuario);
         Fecha f;
         try{
@@ -257,9 +297,66 @@ public class Impl_prueba implements SistemaI{
         u.setFechaN(f);
         u.setComuna(comuna);
         u.setTelefono(telefono);
-        u.setRut(rut);
         u.setNombre(nombre);
         u.setDireccion(direccion);
-        u.setCorreo(correo);
+    }
+    public void actualizarVendedor(int posicionUsuario, String fono, String nombre, String direccion, String correo){
+        Vendedor v = lVendedor.get(posicionUsuario);
+        v.setFono(fono);
+        v.setNombre(nombre);
+        v.setDireccion(direccion);
+        v.setCorreo(correo);
+    }
+    public void actualizarDesarrollador(int posicionUsuario, String fono, String nombre, String direccion, String correo){
+        Desarrollador d = lDesarrollador.get(posicionUsuario);
+        d.setFono(fono);
+        d.setNombre(nombre);
+        d.setDireccion(direccion);
+        d.setCorreo(correo);
+    }
+    public void actualizarVideoJuego(int posicionVideoJuego, String nombre, String version, String fechaD, String categoria, String genero, int precio){
+        VideoJuego v = lVideojugo.get(posicionVideoJuego);
+        Fecha f;
+        try{
+            f=new Fecha(fechaD);
+        }catch(Exception e){
+            throw new NullPointerException(e.getMessage());
+        }
+        v.setNombre(nombre);
+        v.setVersion(version);
+        v.setFechaD(f);
+        v.setCategoria(categoria);
+        v.setGenero(genero);
+        v.setPrecio(precio);
+    }
+    
+//-------------------------------------OBTENER-------------------------------------
+    
+    public String [] obtenerDatosUsuario(int posicionUsuario){
+        Usuario u = lUsuario.get(posicionUsuario);
+        String [] datos = new String[5];
+        datos[0] = u.getNombre();
+        datos[1] = u.getComuna();
+        datos[2] = u.getDireccion();
+        datos[3] = u.getTelefono();
+        datos[4] = u.getFechaN();
+        return datos;
+    }
+    public String [] obtenerDatosVendedor(int posicionVendedor){
+        Vendedor v = lVendedor.get(posicionVendedor);
+        String [] datos = new String[4];
+        datos[0] = v.getNombre();
+        datos[1] = v.getDireccion();
+        datos[2] = v.getFono();
+        datos[3] = v.getClave();
+        return datos;
+    }
+    public String [] obtenerDatosDesarrollador(int posicionDesarrollador){
+        Desarrollador d = lDesarrollador.get(posicionDesarrollador);
+        String [] datos = new String[3];
+        datos[0] = d.getNombre();
+        datos[1] = d.getDireccion();
+        datos[2] = d.getFono();
+        return datos;
     }
 }

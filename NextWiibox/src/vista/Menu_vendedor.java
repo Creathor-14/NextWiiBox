@@ -200,12 +200,12 @@ public class Menu_vendedor extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_AccederMouseClicked
 
     private void jLabel_Acceder1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_Acceder1MouseClicked
-        ActualizarUsuario actualizarUsuario = new ActualizarUsuario();
-        actualizarUsuario.setSize(660, 460);
-        actualizarUsuario.setLocation(0,0);
+        ActualizarArriendo actualizarArriendo = new ActualizarArriendo();
+        actualizarArriendo.setSize(660, 460);
+        actualizarArriendo.setLocation(0,0);
         
         menu.removeAll();
-        menu.add(actualizarUsuario,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        menu.add(actualizarArriendo,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         menu.revalidate();
         menu.repaint();
     }//GEN-LAST:event_jLabel_Acceder1MouseClicked

@@ -123,7 +123,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu");
+        jLabel_menu.setText("Atras");
         jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_menuMouseClicked(evt);
@@ -287,12 +287,12 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Adm_Desarrollador Adm_Desarrollador = new Adm_Desarrollador();
-        Adm_Desarrollador.setSize(660, 460);
-        Adm_Desarrollador.setLocation(0,0);
+        Adm_Desarrollador adm_Desarrollador = new Adm_Desarrollador();
+        adm_Desarrollador.setSize(660, 460);
+        adm_Desarrollador.setLocation(0,0);
 
         ingresarDesarrollador.removeAll();
-        ingresarDesarrollador.add(Adm_Desarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarDesarrollador.add(adm_Desarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         ingresarDesarrollador.revalidate();
         ingresarDesarrollador.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked
