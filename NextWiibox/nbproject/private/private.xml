@@ -5,8 +5,9 @@
         <group>
             <file>file:/C:/Users/thoma/Documents/GitHub/NextWiiBox/NextWiibox/src/vista/Visualizador.java</file>
             <file>file:/C:/Users/thoma/Documents/GitHub/NextWiiBox/NextWiibox/src/vista/ActualizarUsuario.java</file>
-            <file>file:/C:/Users/thoma/Documents/GitHub/NextWiiBox/NextWiibox/src/modelo/Fecha.java</file>
+            <file>file:/C:/Users/thoma/Documents/GitHub/NextWiiBox/NextWiibox/src/vista/ActualizarDesarrollador.java</file>
             <file>file:/C:/Users/thoma/Documents/GitHub/NextWiiBox/NextWiibox/src/controlador/Impl_prueba.java</file>
+            <file>file:/C:/Users/thoma/Documents/GitHub/NextWiiBox/NextWiibox/src/vista/IngresarDesarrollador.java</file>
         </group>
     </open-files>
 </project-private>

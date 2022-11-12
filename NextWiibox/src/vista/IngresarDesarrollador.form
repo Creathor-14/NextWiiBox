@@ -73,9 +73,9 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
-                          <Component id="jLabel_direccion" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="jLabel_correo" min="-2" pref="130" max="-2" attributes="0"/>
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="jTextField_direccion" min="-2" pref="270" max="-2" attributes="0"/>
+                          <Component id="jTextField_correo" min="-2" pref="270" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="260" pref="260" max="-2" attributes="0"/>
@@ -129,8 +129,8 @@
                   </Group>
                   <Component id="jSeparator_nombre" min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel_direccion" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField_direccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_correo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField_correo" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jSeparator_direccion" min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -229,7 +229,7 @@
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator_nombre">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel_direccion">
+        <Component class="javax.swing.JLabel" name="jLabel_correo">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -241,10 +241,10 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="11"/>
-            <Property name="text" type="java.lang.String" value="Direccion:"/>
+            <Property name="text" type="java.lang.String" value="Correo:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField_direccion">
+        <Component class="javax.swing.JTextField" name="jTextField_correo">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="33" type="rgb"/>

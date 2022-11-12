@@ -291,7 +291,6 @@ public class ActualizarUsuario extends javax.swing.JPanel {
             ocultar.setVisible(true);
             jPanel_actualizar.setVisible(true);
         }
-        
     }//GEN-LAST:event_jLabel_buscarMouseClicked
 
     private void jLabel_actualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_actualizarMouseClicked

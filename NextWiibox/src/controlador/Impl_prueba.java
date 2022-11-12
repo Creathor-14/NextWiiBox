@@ -133,7 +133,7 @@ public class Impl_prueba implements SistemaI{
         }
         throw new NullPointerException("No existe el desarrollador con el rut "+rutDesarrollador);
     }
-    public boolean ingresarDesarrollador(String fono, String rut, String nombre, String direccion, String correo){
+    public boolean ingresarDesarrollador(String fono, String rut, String nombre, String comuna, String correo){
     // rut y correo unico
         if(!rutUnico(rut)){
             throw new NullPointerException("El rut ya existe en el sistema.");
@@ -142,7 +142,7 @@ public class Impl_prueba implements SistemaI{
             throw new NullPointerException("El correo ya existe en el sistema.");
         }
     // ingresar el desarrollador
-        Desarrollador d = new Desarrollador(fono, rut, nombre, direccion, correo);
+        Desarrollador d = new Desarrollador(fono, rut, nombre, comuna, correo);
         return lDesarrollador.add(d);
     }
     public boolean ingresarVendedor(String fono, String rut, String nombre, String direccion, String correo){
@@ -268,7 +268,9 @@ public class Impl_prueba implements SistemaI{
     public int buscarDesarrollador(String rut){
         for(int i=0;i<lDesarrollador.size();i++){
             Desarrollador u = lDesarrollador.get(i);
+            System.out.println(u.getRut()+" / "+rut);
             if(u.getRut().equalsIgnoreCase(rut)){
+                System.out.println("Encontrado");
                 return i;
             }
         }
@@ -354,9 +356,11 @@ public class Impl_prueba implements SistemaI{
     public String [] obtenerDatosDesarrollador(int posicionDesarrollador){
         Desarrollador d = lDesarrollador.get(posicionDesarrollador);
         String [] datos = new String[3];
+        System.out.println("ok "+d.getRut());
         datos[0] = d.getNombre();
         datos[1] = d.getDireccion();
         datos[2] = d.getFono();
+       
         return datos;
     }
 }
