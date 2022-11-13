@@ -7,6 +7,7 @@ package vista;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -42,6 +43,7 @@ public class Pruebas extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(138, 25));
         setMinimumSize(new java.awt.Dimension(138, 25));
@@ -126,6 +128,14 @@ public class Pruebas extends javax.swing.JPanel {
         });
         menu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, -1, -1));
 
+        jButton3.setText("actualizar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        menu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -170,6 +180,13 @@ public class Pruebas extends javax.swing.JPanel {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         eliminarTodo();
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        List <Vector> matriz =tabla.getDataVector();
+        for(int i=0;i<matriz.size();i++){
+            System.out.println(matriz.get(i));
+        }
+    }//GEN-LAST:event_jButton3MouseClicked
     private void eliminarTodo(){
         int fila = jTable1.getRowCount();
         System.out.println("filas: "+fila);
@@ -194,6 +211,7 @@ public class Pruebas extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel_Acceder3;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JPanel jPanel_cerrar_sesion;

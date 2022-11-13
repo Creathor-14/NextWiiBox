@@ -9,6 +9,7 @@ import modelo.Fecha;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 
 public class Impl_prueba implements SistemaI{
@@ -137,6 +138,7 @@ public class Impl_prueba implements SistemaI{
             }
             posicion++;
         }
+    // verificar que no exista un arriendo con ese codigo de videoJuego
     // verificar fecha
         Fecha f;
         try{
@@ -397,6 +399,27 @@ public class Impl_prueba implements SistemaI{
         v.setCategoria(categoria);
         v.setGenero(genero);
         v.setPrecio(precio);
+    }
+    public void actualizarArriendo(List <Vector> tabla){
+        for(int i=0;i<tabla.size();i++){
+            Vector table = tabla.get(i);
+            for(int b=0;b<lArriendo.size();b++){
+                Usuario u = lArriendo.get(b).getUsuario();
+                VideoJuego v = lArriendo.get(b).getVideoJuego();
+                boolean rut_iguales = u.getRut().equalsIgnoreCase(table.get(0)+"");
+                boolean codigos_iguales = (v.getCodigo()+"").equals(table.get(1)+"");
+                if(rut_iguales && codigos_iguales) {
+                    Fecha f;
+                    String fecha =table.get(2)+"";
+                    try{
+                        f=new Fecha(fecha);
+                    }catch(Exception e){
+                        throw new NullPointerException(e.getMessage());
+                    }
+                    lArriendo.get(b).setFecha_entrega(f);
+                }
+            }
+        }
     }
     
 //-------------------------------------OBTENER-------------------------------------

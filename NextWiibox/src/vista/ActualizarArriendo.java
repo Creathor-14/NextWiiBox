@@ -4,7 +4,10 @@
  */
 package vista;
 
+import java.util.List;
+import java.util.Vector;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -15,15 +18,19 @@ public class ActualizarArriendo extends javax.swing.JPanel {
     private String buscado_por;
     private String rut;
     private int codigo;
+    private DefaultTableModel tabla;
     /**
      * Creates new form IngresarUsuario
      */
     public ActualizarArriendo() {
         initComponents();
+        jScrollPane1.setVisible(false);
         jTextField_fechaE.setVisible(false);
         jLabel_fechaE.setVisible(false);
         jSeparator_fechaE.setVisible(false);
         jPanel_actualizar.setVisible(false);
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        tabla = model;
     }
 
     /**
@@ -47,13 +54,16 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         jLabel_registrar1 = new javax.swing.JLabel();
         jPanel_buscar_codigo = new javax.swing.JPanel();
         jLabel_buscar_segun_code = new javax.swing.JLabel();
-        jLabel_fechaE = new javax.swing.JLabel();
-        jSeparator_fechaE = new javax.swing.JSeparator();
-        jTextField_fechaE = new javax.swing.JTextField();
         jPanel_menu = new javax.swing.JPanel();
         jLabel_menu = new javax.swing.JLabel();
         jPanel_actualizar = new javax.swing.JPanel();
         jLabel_actualizar = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        ocultar = new javax.swing.JPanel();
+        jLabel_fechaE = new javax.swing.JLabel();
+        jSeparator_fechaE = new javax.swing.JSeparator();
+        jTextField_fechaE = new javax.swing.JTextField();
 
         actualizarArriendo.setBackground(new java.awt.Color(51, 51, 51));
         actualizarArriendo.setPreferredSize(new java.awt.Dimension(610, 460));
@@ -157,20 +167,6 @@ public class ActualizarArriendo extends javax.swing.JPanel {
 
         actualizarArriendo.add(jPanel_buscar_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, 33));
 
-        jLabel_fechaE.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_fechaE.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_fechaE.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_fechaE.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_fechaE.setText("Fecha entrega:");
-        actualizarArriendo.add(jLabel_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 130, -1));
-        actualizarArriendo.add(jSeparator_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 270, 10));
-
-        jTextField_fechaE.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_fechaE.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_fechaE.setText("DD/MM/YY");
-        jTextField_fechaE.setBorder(null);
-        actualizarArriendo.add(jTextField_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 270, -1));
-
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -222,24 +218,65 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         jPanel_actualizar.setLayout(jPanel_actualizarLayout);
         jPanel_actualizarLayout.setHorizontalGroup(
             jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
-            .addGroup(jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_actualizarLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel_actualizarLayout.createSequentialGroup()
+                .addComponent(jLabel_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel_actualizarLayout.setVerticalGroup(
             jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-            .addGroup(jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_actualizarLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel_actualizarLayout.createSequentialGroup()
+                .addComponent(jLabel_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
 
-        actualizarArriendo.add(jPanel_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
+        actualizarArriendo.add(jPanel_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 100, 30));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Rut", "Codigo", "Fecha de entrega"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        actualizarArriendo.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 500, 110));
+
+        ocultar.setBackground(new java.awt.Color(51, 51, 51));
+        ocultar.setPreferredSize(new java.awt.Dimension(610, 460));
+        ocultar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_fechaE.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_fechaE.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_fechaE.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_fechaE.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_fechaE.setText("Fecha entrega:");
+        ocultar.add(jLabel_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 130, -1));
+        ocultar.add(jSeparator_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 270, 10));
+
+        jTextField_fechaE.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_fechaE.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_fechaE.setText("DD/MM/YY");
+        jTextField_fechaE.setBorder(null);
+        ocultar.add(jTextField_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 270, -1));
+
+        actualizarArriendo.add(ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 420, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -274,18 +311,29 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         if(posicion == -1){
             JOptionPane.showMessageDialog(null,"Este Usuario no tiene arriendos.");
         }else{
-            jTextField_codigoVideoJuego.setVisible(true);
-            jLabel_codigo.setVisible(true);
-            jSeparator_codigo.setVisible(true);
+            eliminarDatosTable();
+            jScrollPane1.setVisible(true);
+            
+            List <String[]> matriz = Visualizador.sistema.obtenerDatosArrindo_segun_rut(rutCliente);
+            
+            for(int i = 0;i<matriz.size();i++){
+                tabla.addRow(matriz.get(i));
+            }
+
             rut = rutCliente;
             buscado_por = "rut";
+            jPanel_actualizar.setVisible(true);
         }
 
     }//GEN-LAST:event_jLabel_registrar1MouseClicked
 
     private void jLabel_actualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_actualizarMouseClicked
-        String fecha_de_entrega = jTextField_fechaE.getText();
-        verificarCamposEnBlanco(fecha_de_entrega, "fecha entrega");
+        List <Vector> matriz =tabla.getDataVector();
+        Visualizador.sistema.actualizarArriendo(matriz);
+        jScrollPane1.setVisible(false);
+        jPanel_actualizar.setVisible(false);
+        /*
+        String fecha_de_entrega = tabla.getValueAt(1, 1)+"";
 
         try{
             //Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
@@ -293,7 +341,7 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());
 
-        }
+        }*/
     }//GEN-LAST:event_jLabel_actualizarMouseClicked
     public void verificarCamposEnBlanco(String campo,String nombre){
         if(campo.equals("")){
@@ -318,11 +366,14 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         }catch(Exception e){
             throw new NullPointerException("El codigo del viedeoJuego debe ser un valor numerico.");
         }
-        
-        
-        
     }//GEN-LAST:event_jLabel_buscar_segun_codeMouseClicked
-
+    
+    private void eliminarDatosTable(){
+        int fila = jTable1.getRowCount();
+        for(int i=fila-1;i>=0;i--){
+            tabla.removeRow(i);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actualizarArriendo;
@@ -338,11 +389,14 @@ public class ActualizarArriendo extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel_buscar_codigo;
     private javax.swing.JPanel jPanel_buscar_rut;
     private javax.swing.JPanel jPanel_menu;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator_codigo;
     private javax.swing.JSeparator jSeparator_fechaE;
     private javax.swing.JSeparator jSeparator_rut;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField_codigoVideoJuego;
     private javax.swing.JTextField jTextField_fechaE;
     private javax.swing.JTextField jTextField_rutCliente;
+    private javax.swing.JPanel ocultar;
     // End of variables declaration//GEN-END:variables
 }
