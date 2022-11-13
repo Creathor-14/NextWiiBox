@@ -73,7 +73,7 @@ public class IngresarArriendo extends javax.swing.JPanel {
         jLabel_rut.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_rut.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_rut.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_rut.setText("Rut cliente:");
+        jLabel_rut.setText("Rut usuario:");
         ingresarUsuario.add(jLabel_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 130, -1));
 
         jTextField_rutCliente.setBackground(new java.awt.Color(51, 51, 51));
@@ -88,7 +88,7 @@ public class IngresarArriendo extends javax.swing.JPanel {
         jLabel_fechaA.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_fechaA.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel_fechaA.setText("Fecha arriendo:");
-        ingresarUsuario.add(jLabel_fechaA, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, -1));
+        ingresarUsuario.add(jLabel_fechaA, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 130, -1));
 
         jTextField_codigoVideoJuego.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_codigoVideoJuego.setForeground(new java.awt.Color(102, 102, 102));
@@ -186,7 +186,7 @@ public class IngresarArriendo extends javax.swing.JPanel {
         jLabel_fechaE.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_fechaE.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel_fechaE.setText("Fecha entrega:");
-        ingresarUsuario.add(jLabel_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
+        ingresarUsuario.add(jLabel_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 130, -1));
         ingresarUsuario.add(jSeparator_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 270, 10));
 
         jTextField_fechaE.setBackground(new java.awt.Color(51, 51, 51));
@@ -230,11 +230,11 @@ public class IngresarArriendo extends javax.swing.JPanel {
      * @param evt 
      */
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        String rutCliente = jTextField_rutCliente.getText();
-        verificarCamposEnBlanco(rutCliente, "rutCliente");
+        String rutUsuario = jTextField_rutCliente.getText();
+        verificarCamposEnBlanco(rutUsuario, "rutUsuario");
         
-        String codigoVideoJuego = jTextField_codigoVideoJuego.getText();
-        verificarCamposEnBlanco(codigoVideoJuego, "codigoVideoJuego");
+        String codigo = jTextField_codigoVideoJuego.getText();
+        verificarCamposEnBlanco(codigo, "codigo");
 
         String fechaA=jTextField_fechaA.getText();
         verificarCamposEnBlanco(fechaA, "fechaA");
@@ -243,7 +243,7 @@ public class IngresarArriendo extends javax.swing.JPanel {
         verificarCamposEnBlanco(fechaE, "fechaE");
 
         try{
-            Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente, fechaA, fechaE);
+            Visualizador.sistema.ingresarArriendo(codigo, rutUsuario, fechaA, fechaE);
             JOptionPane.showMessageDialog(null,"Arriendo ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());

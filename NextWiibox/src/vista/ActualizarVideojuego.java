@@ -304,8 +304,7 @@ public class ActualizarVideojuego extends javax.swing.JPanel {
         String fecha=jTextField_fecha.getText();
         String categoria=jTextField_categoria.getText();
         String genero=jTextField_genero.getText();
-        String p=jTextField_precio.getText();
-        int precio = Integer.parseInt(p);
+        String precio=jTextField_precio.getText();
         try{
             Visualizador.sistema.actualizarVideoJuego(codigoVideoJuego, nombre, version, fecha, categoria, genero, precio);
             JOptionPane.showMessageDialog(null,"Datos actualizados");

@@ -28,7 +28,7 @@ public class Impl_prueba implements SistemaI{
     }
     
     
-    
+    @Override
     public boolean rutUnico(String rut){
         for(Desarrollador d : lDesarrollador){
             if(d.getRut().equalsIgnoreCase(rut)){
@@ -47,6 +47,7 @@ public class Impl_prueba implements SistemaI{
         }
         return true;
     }
+    @Override
     public boolean correoUnico(String correo){
         for(Desarrollador d : lDesarrollador){
             if(d.getCorreo().equalsIgnoreCase(correo)){
@@ -88,7 +89,7 @@ public class Impl_prueba implements SistemaI{
     }
     
 //-------------------------------------INGRESAR-------------------------------------
-    
+    @Override
     public boolean ingresarUsuario(String fechaN, String comuna, String telefono, String rut, String nombre, String direccion, String correo){
     // rut y correo unico
         if(!rutUnico(rut)){
@@ -108,7 +109,21 @@ public class Impl_prueba implements SistemaI{
         Usuario u = new Usuario(f, comuna, telefono, rut, nombre, direccion, correo);
         return lUsuario.add(u);
     }
-    public boolean ingresarVideojuego(int codigo, String nombre, String version, String fechaD, String categoria, String genero, int precio, String rutDesarrollador){
+    @Override
+    public boolean ingresarVideojuego(String codigoV, String nombre, String version, String fechaD, String categoria, String genero, String valor, String rutDesarrollador){
+        int codigo;
+        try{
+            codigo= Integer.parseInt(codigoV);
+        }catch(Exception e){
+            throw new NullPointerException("El codigo del viedeoJuego debe ser un valor numerico.");
+        }
+        //
+        int precio;
+        try{
+            precio= Integer.parseInt(valor);
+        }catch(Exception e){
+            throw new NullPointerException("El precio del viedeoJuego debe ser un valor numerico.");
+        }
     // precio negativo
         if(precio<0){
             throw new NullPointerException("El valor del videoJuego no puede ser negativo.");
@@ -138,6 +153,7 @@ public class Impl_prueba implements SistemaI{
         }
         throw new NullPointerException("No existe el desarrollador con el rut "+rutDesarrollador);
     }
+    @Override
     public boolean ingresarDesarrollador(String fono, String rut, String nombre, String direccion, String correo){
     // rut y correo unico
         if(!rutUnico(rut)){
@@ -150,6 +166,7 @@ public class Impl_prueba implements SistemaI{
         Desarrollador d = new Desarrollador(fono, rut, nombre, direccion, correo);
         return lDesarrollador.add(d);
     }
+    @Override
     public boolean ingresarVendedor(String fono, String rut, String nombre, String direccion, String correo){
     // rut y correo unico
         if(!rutUnico(rut)){
@@ -162,10 +179,11 @@ public class Impl_prueba implements SistemaI{
         Vendedor v = new Vendedor(fono, rut, nombre, direccion, correo);
         return lVendedor.add(v);
     }
+    @Override
     public boolean ingresarArriendo(String codigo, String rutUsuario,String fechaI, String fechaE){
         int codigoVideojuego;
         try{
-            codigoVideojuego= Integer.valueOf(codigo);
+            codigoVideojuego= Integer.parseInt(codigo);
         }catch(Exception e){
             throw new NullPointerException("Codigo del juego no valido.");
         }
@@ -249,6 +267,26 @@ public class Impl_prueba implements SistemaI{
         }
         return false;
     }
+    public boolean eliminarArriendo(int codigo){
+        for(Arriendo a: lArriendo){
+            if(a.getVideoJuego().getCodigo()==codigo){
+                lVideojugo.add(a.getVideoJuego());
+                lArriendo.remove(a);
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean eliminarArriendo(String rut){
+        for(Arriendo a: lArriendo){
+            if(a.getUsuario().getRut().equalsIgnoreCase(rut)){
+                lVideojugo.add(a.getVideoJuego());
+                lArriendo.remove(a);
+                return true;
+            }
+        }
+        return false;
+    }
     
 //-------------------------------------BUSCAR-------------------------------------
     
@@ -318,7 +356,13 @@ public class Impl_prueba implements SistemaI{
         d.setNombre(nombre);
         d.setDireccion(direccion);
     }
-    public void actualizarVideoJuego(int posicionVideoJuego, String nombre, String version, String fechaD, String categoria, String genero, int precio){
+    public void actualizarVideoJuego(int posicionVideoJuego, String nombre, String version, String fechaD, String categoria, String genero, String valor){
+        int precio;
+        try{
+            precio= Integer.parseInt(valor);
+        }catch(Exception e){
+            throw new NullPointerException("El precio del viedeoJuego debe ser un valor numerico.");
+        }
         if(precio<0){
             throw new NullPointerException("El valor del videoJuego no puede ser negativo.");
         }
