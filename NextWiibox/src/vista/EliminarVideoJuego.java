@@ -166,8 +166,8 @@ public class EliminarVideoJuego extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        String c = jLabel_rut.getText();
-        int codigo = Integer.valueOf(c);
+        String c = jTextField_rut.getText();
+        int codigo = Integer.parseInt(c);
         boolean eliminado = Visualizador.sistema.eliminarVideoJuego(codigo);
         if(eliminado){
             JOptionPane.showMessageDialog(null,"Videojuego eliminado.");

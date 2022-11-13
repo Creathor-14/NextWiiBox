@@ -305,7 +305,7 @@ public class ActualizarVideojuego extends javax.swing.JPanel {
         String categoria=jTextField_categoria.getText();
         String genero=jTextField_genero.getText();
         String p=jTextField_precio.getText();
-        int precio = Integer.valueOf(p);
+        int precio = Integer.parseInt(p);
         try{
             Visualizador.sistema.actualizarVideoJuego(codigoVideoJuego, nombre, version, fecha, categoria, genero, precio);
             JOptionPane.showMessageDialog(null,"Datos actualizados");
@@ -319,7 +319,7 @@ public class ActualizarVideojuego extends javax.swing.JPanel {
     private void jLabel_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_buscarMouseClicked
         //Buscar al usuario segun el codigo
         String c = jTextField_codigo.getText();
-        int code = Integer.valueOf(c);
+        int code = Integer.parseInt(c);
         int posicion = Visualizador.sistema.buscarVideoJuego(code);
         if(posicion == -1){
             JOptionPane.showMessageDialog(null,"No existe un VideoJuego con este codigo.");

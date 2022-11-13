@@ -390,7 +390,7 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         String rutDesarrollador = jTextField_desarrollador.getText();
         verificarCamposEnBlanco(rutDesarrollador, "rut del desarrollador");
         try{
-            Visualizador.sistema.ingresarVideojuego(Integer.valueOf(codigo), nombre, version, fecha, categoria, genero, Integer.valueOf(precio), rutDesarrollador);
+            Visualizador.sistema.ingresarVideojuego(Integer.parseInt(codigo), nombre, version, fecha, categoria, genero, Integer.parseInt(precio), rutDesarrollador);
             JOptionPane.showMessageDialog(null,"VideoJuego ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());   

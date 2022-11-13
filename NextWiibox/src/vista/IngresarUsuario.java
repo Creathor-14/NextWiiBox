@@ -388,7 +388,7 @@ public class IngresarUsuario extends javax.swing.JPanel {
         verificarCamposEnBlanco(correo, "correo");
         try{
             Visualizador.sistema.ingresarUsuario(fecha, comuna, telefono, rut, nombre, direccion, correo);
-            JOptionPane.showMessageDialog(null,"VideoJuego ingresado.");
+            JOptionPane.showMessageDialog(null,"Usuario ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());   
         }
