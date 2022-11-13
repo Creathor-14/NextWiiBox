@@ -12,9 +12,9 @@ import javax.swing.JOptionPane;
  */
 public class ActualizarArriendo extends javax.swing.JPanel {
     
-
-    int posicion_rut_arriendo;
-    int posicion_codigo_arriendo;
+    private String buscado_por;
+    private String rut;
+    private int codigo;
     /**
      * Creates new form IngresarUsuario
      */
@@ -23,7 +23,7 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         jTextField_fechaE.setVisible(false);
         jLabel_fechaE.setVisible(false);
         jSeparator_fechaE.setVisible(false);
-        jPanel_registrar.setVisible(false);
+        jPanel_actualizar.setVisible(false);
     }
 
     /**
@@ -43,25 +43,20 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         jLabel_codigo = new javax.swing.JLabel();
         jTextField_codigoVideoJuego = new javax.swing.JTextField();
         jSeparator_codigo = new javax.swing.JSeparator();
-        jPanel_menu = new javax.swing.JPanel();
-        jLabel_menu = new javax.swing.JLabel();
-        jPanel_buscar_codigo = new javax.swing.JPanel();
-        jLabel_buscar_segun_code = new javax.swing.JLabel();
         jPanel_buscar_rut = new javax.swing.JPanel();
         jLabel_registrar1 = new javax.swing.JLabel();
-        jPanel_registrar = new javax.swing.JPanel();
-        jLabel_registrar = new javax.swing.JLabel();
+        jPanel_buscar_codigo = new javax.swing.JPanel();
+        jLabel_buscar_segun_code = new javax.swing.JLabel();
         jLabel_fechaE = new javax.swing.JLabel();
         jSeparator_fechaE = new javax.swing.JSeparator();
         jTextField_fechaE = new javax.swing.JTextField();
+        jPanel_menu = new javax.swing.JPanel();
+        jLabel_menu = new javax.swing.JLabel();
+        jPanel_actualizar = new javax.swing.JPanel();
+        jLabel_actualizar = new javax.swing.JLabel();
 
         actualizarArriendo.setBackground(new java.awt.Color(51, 51, 51));
         actualizarArriendo.setPreferredSize(new java.awt.Dimension(610, 460));
-        actualizarArriendo.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                actualizarArriendoMouseDragged(evt);
-            }
-        });
         actualizarArriendo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel_Titulo.setBackground(new java.awt.Color(255, 255, 255));
@@ -98,40 +93,34 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         actualizarArriendo.add(jTextField_codigoVideoJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 270, -1));
         actualizarArriendo.add(jSeparator_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 270, 10));
 
-        jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel_buscar_rut.setBackground(new java.awt.Color(0, 153, 153));
 
-        jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Atras");
-        jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel_registrar1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_registrar1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_registrar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_registrar1.setText("Buscar por rut");
+        jLabel_registrar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_menuMouseClicked(evt);
+                jLabel_registrar1MouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel_menuLayout = new javax.swing.GroupLayout(jPanel_menu);
-        jPanel_menu.setLayout(jPanel_menuLayout);
-        jPanel_menuLayout.setHorizontalGroup(
-            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_menuLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+        javax.swing.GroupLayout jPanel_buscar_rutLayout = new javax.swing.GroupLayout(jPanel_buscar_rut);
+        jPanel_buscar_rut.setLayout(jPanel_buscar_rutLayout);
+        jPanel_buscar_rutLayout.setHorizontalGroup(
+            jPanel_buscar_rutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_buscar_rutLayout.createSequentialGroup()
+                .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel_menuLayout.setVerticalGroup(
-            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 35, Short.MAX_VALUE)
-            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_menuLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+        jPanel_buscar_rutLayout.setVerticalGroup(
+            jPanel_buscar_rutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscar_rutLayout.createSequentialGroup()
+                .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        actualizarArriendo.add(jPanel_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, -1, -1));
+        actualizarArriendo.add(jPanel_buscar_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 180, 33));
 
         jPanel_buscar_codigo.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -168,70 +157,6 @@ public class ActualizarArriendo extends javax.swing.JPanel {
 
         actualizarArriendo.add(jPanel_buscar_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, 33));
 
-        jPanel_buscar_rut.setBackground(new java.awt.Color(0, 153, 153));
-
-        jLabel_registrar1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel_registrar1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_registrar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_registrar1.setText("Buscar por rut");
-        jLabel_registrar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_registrar1MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel_buscar_rutLayout = new javax.swing.GroupLayout(jPanel_buscar_rut);
-        jPanel_buscar_rut.setLayout(jPanel_buscar_rutLayout);
-        jPanel_buscar_rutLayout.setHorizontalGroup(
-            jPanel_buscar_rutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_buscar_rutLayout.createSequentialGroup()
-                .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel_buscar_rutLayout.setVerticalGroup(
-            jPanel_buscar_rutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscar_rutLayout.createSequentialGroup()
-                .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        actualizarArriendo.add(jPanel_buscar_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 180, 33));
-
-        jPanel_registrar.setBackground(new java.awt.Color(0, 153, 153));
-
-        jLabel_registrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel_registrar.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_registrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_registrar.setText("Eliminar");
-        jLabel_registrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_registrarMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel_registrarLayout = new javax.swing.GroupLayout(jPanel_registrar);
-        jPanel_registrar.setLayout(jPanel_registrarLayout);
-        jPanel_registrarLayout.setHorizontalGroup(
-            jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
-            .addGroup(jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_registrarLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel_registrarLayout.setVerticalGroup(
-            jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-            .addGroup(jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_registrarLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        actualizarArriendo.add(jPanel_registrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
-
         jLabel_fechaE.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_fechaE.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_fechaE.setForeground(new java.awt.Color(255, 255, 255));
@@ -245,6 +170,76 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         jTextField_fechaE.setText("DD/MM/YY");
         jTextField_fechaE.setBorder(null);
         actualizarArriendo.add(jTextField_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 270, -1));
+
+        jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_menu.setText("Atras");
+        jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_menuMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_menuLayout = new javax.swing.GroupLayout(jPanel_menu);
+        jPanel_menu.setLayout(jPanel_menuLayout);
+        jPanel_menuLayout.setHorizontalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel_menuLayout.setVerticalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        actualizarArriendo.add(jPanel_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, -1, -1));
+
+        jPanel_actualizar.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_actualizar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_actualizar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_actualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_actualizar.setText("Actualizar");
+        jLabel_actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_actualizarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_actualizarLayout = new javax.swing.GroupLayout(jPanel_actualizar);
+        jPanel_actualizar.setLayout(jPanel_actualizarLayout);
+        jPanel_actualizarLayout.setHorizontalGroup(
+            jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 112, Short.MAX_VALUE)
+            .addGroup(jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_actualizarLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel_actualizarLayout.setVerticalGroup(
+            jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 47, Short.MAX_VALUE)
+            .addGroup(jPanel_actualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_actualizarLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        actualizarArriendo.add(jPanel_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -282,16 +277,15 @@ public class ActualizarArriendo extends javax.swing.JPanel {
             jTextField_codigoVideoJuego.setVisible(true);
             jLabel_codigo.setVisible(true);
             jSeparator_codigo.setVisible(true);
-            posicion_rut_arriendo = posicion;
+            rut = rutCliente;
+            buscado_por = "rut";
         }
 
     }//GEN-LAST:event_jLabel_registrar1MouseClicked
 
-    private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        String rutCliente = jTextField_rutCliente.getText();
-        verificarCamposEnBlanco(rutCliente, "rutCliente");
-
-        
+    private void jLabel_actualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_actualizarMouseClicked
+        String fecha_de_entrega = jTextField_fechaE.getText();
+        verificarCamposEnBlanco(fecha_de_entrega, "fecha entrega");
 
         try{
             //Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
@@ -300,47 +294,50 @@ public class ActualizarArriendo extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,e.getMessage());
 
         }
-    }//GEN-LAST:event_jLabel_registrarMouseClicked
-    
+    }//GEN-LAST:event_jLabel_actualizarMouseClicked
     public void verificarCamposEnBlanco(String campo,String nombre){
         if(campo.equals("")){
-            JOptionPane.showMessageDialog(null,"El/La "+nombre+" no puede estar en blanco.");
+            JOptionPane.showMessageDialog(null,"La "+nombre+" no puede estar en blanco.");
         }
     }
-    private void actualizarArriendoMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actualizarArriendoMouseDragged
-        //BORRAR
-    }//GEN-LAST:event_actualizarArriendoMouseDragged
-
     private void jLabel_buscar_segun_codeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_buscar_segun_codeMouseClicked
         String codigoVideoJuego = jTextField_codigoVideoJuego.getText();
         verificarCamposEnBlanco(codigoVideoJuego, "codigoVideoJuego");
-        
-        int posicion = Visualizador.sistema.buscarArriendo(WIDTH);// modificar todos los buscar con el codigo, agregar try.
-        if(posicion == -1){
-            JOptionPane.showMessageDialog(null,"Este Usuario no tiene arriendos.");
-        }else{
-            jTextField_codigoVideoJuego.setVisible(true);
-            jLabel_codigo.setVisible(true);
-            jSeparator_codigo.setVisible(true);
-            posicion_rut_arriendo = posicion;
+        try{
+            int code = Integer.parseInt(codigoVideoJuego);
+            int posicion = Visualizador.sistema.buscarArriendo(code);
+            if(posicion == -1){
+                JOptionPane.showMessageDialog(null,"No existen arriendos de este videoJuego.");
+            }else{
+                jTextField_codigoVideoJuego.setVisible(true);
+                jLabel_codigo.setVisible(true);
+                jSeparator_codigo.setVisible(true);
+                codigo = code;
+                buscado_por = "codigo";
+            }
+        }catch(Exception e){
+            throw new NullPointerException("El codigo del viedeoJuego debe ser un valor numerico.");
         }
+        
+        
+        
     }//GEN-LAST:event_jLabel_buscar_segun_codeMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actualizarArriendo;
     private javax.swing.JLabel jLabel_Titulo;
+    private javax.swing.JLabel jLabel_actualizar;
     private javax.swing.JLabel jLabel_buscar_segun_code;
     private javax.swing.JLabel jLabel_codigo;
     private javax.swing.JLabel jLabel_fechaE;
     private javax.swing.JLabel jLabel_menu;
-    private javax.swing.JLabel jLabel_registrar;
     private javax.swing.JLabel jLabel_registrar1;
     private javax.swing.JLabel jLabel_rut;
+    private javax.swing.JPanel jPanel_actualizar;
     private javax.swing.JPanel jPanel_buscar_codigo;
     private javax.swing.JPanel jPanel_buscar_rut;
     private javax.swing.JPanel jPanel_menu;
-    private javax.swing.JPanel jPanel_registrar;
     private javax.swing.JSeparator jSeparator_codigo;
     private javax.swing.JSeparator jSeparator_fechaE;
     private javax.swing.JSeparator jSeparator_rut;

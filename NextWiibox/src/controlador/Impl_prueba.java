@@ -336,7 +336,7 @@ public class Impl_prueba implements SistemaI{
         return -1;
     }
     public int buscarArriendo(String rut){
-        for(int i=0;i<lDesarrollador.size();i++){
+        for(int i=0;i<lArriendo.size();i++){
             Arriendo a = lArriendo.get(i);
             if(a.getUsuario().getRut().equalsIgnoreCase(rut)){
                 return i;
@@ -439,4 +439,33 @@ public class Impl_prueba implements SistemaI{
         datos[5] = v.getPrecio()+"";
         return datos;
     }
+    public List <String[]> obtenerDatosArrindo_segun_rut(String rut){
+        List <String[]> matriz = new ArrayList<>();
+        for(int i=0;i<lArriendo.size();i++){
+            Arriendo a = lArriendo.get(i);
+            if(a.getUsuario().getRut().equalsIgnoreCase(rut)){
+                String [] lista = new String[3];
+                lista[0] = a.getUsuario().getRut();
+                lista[1] = a.getVideoJuego().getCodigo()+"";
+                lista[2] = a.getFecha_entrega().toString();
+                matriz.add(lista);
+            }
+        }
+        return matriz;
+    }
+    public List <String[]> obtenerDatosArrindo_segun_codigo(int codigo){
+        List <String[]> matriz = new ArrayList<>();
+        for(int i=0;i<lArriendo.size();i++){
+            Arriendo a = lArriendo.get(i);
+            if(a.getVideoJuego().getCodigo() == codigo){
+                String [] lista = new String[3];
+                lista[0] = a.getUsuario().getRut();
+                lista[1] = a.getVideoJuego().getCodigo()+"";
+                lista[2] = a.getFecha_entrega().toString();
+                matriz.add(lista);
+            }
+        }
+        return matriz;
+    }
+    
 }
