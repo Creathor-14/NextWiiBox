@@ -119,7 +119,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
         jLabel_telefono.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_telefono.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_telefono.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_telefono.setText("Telefono:");
+        jLabel_telefono.setText("Fono:");
 
         jTextField_telefono.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_telefono.setForeground(new java.awt.Color(102, 102, 102));
@@ -319,7 +319,7 @@ public class IngresarVendedor extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(ingresarVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 34, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -348,12 +348,12 @@ public class IngresarVendedor extends javax.swing.JPanel {
         String direccion = jTextField_direccion.getText();
         verificarCamposEnBlanco(direccion, "direccion");        
         
-        String telefono = jTextField_telefono.getText();
-        verificarCamposEnBlanco(telefono, "telefono");        
+        String fono = jTextField_telefono.getText();
+        verificarCamposEnBlanco(fono, "fono");        
                          
         
         try{
-            Visualizador.sistema.ingresarVendedor (rut, nombre, correo, direccion, telefono);
+            Visualizador.sistema.ingresarVendedor (fono, rut, nombre, direccion, correo);
             JOptionPane.showMessageDialog(null,"Vendedor ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());

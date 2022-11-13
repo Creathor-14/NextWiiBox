@@ -35,7 +35,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="ingresarVendedor" min="-2" pref="466" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -340,7 +340,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="11"/>
-            <Property name="text" type="java.lang.String" value="Telefono:"/>
+            <Property name="text" type="java.lang.String" value="Fono:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField_telefono">

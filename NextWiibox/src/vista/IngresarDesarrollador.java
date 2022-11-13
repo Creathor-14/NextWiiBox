@@ -100,11 +100,11 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jLabel_comuna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_comuna.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_comuna.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_comuna.setText("Comuna:");
+        jLabel_comuna.setText("Direccion:");
 
         jTextField_comuna.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_comuna.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_comuna.setText("San Joaquin");
+        jTextField_comuna.setText("direccion 12");
         jTextField_comuna.setBorder(null);
 
         jLabel_fono.setBackground(new java.awt.Color(255, 255, 255));
@@ -115,7 +115,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
 
         jTextField_fono.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_fono.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_fono.setText("Industrias 111");
+        jTextField_fono.setText("+56 9 8888 8888");
         jTextField_fono.setBorder(null);
 
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
@@ -308,8 +308,8 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         String correo = jTextField_correo.getText();
         verificarCamposEnBlanco(correo, "correo");
  
-        String comuna = jTextField_comuna.getText();
-        verificarCamposEnBlanco(comuna, "comuna");
+        String direccion = jTextField_comuna.getText();
+        verificarCamposEnBlanco(direccion, "direccion");
 
         String fono = jTextField_fono.getText();
         verificarCamposEnBlanco(fono, "fono");
@@ -317,7 +317,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         
         
         try{
-            Visualizador.sistema.ingresarDesarrollador(fono, rut, nombre, comuna, correo);
+            Visualizador.sistema.ingresarDesarrollador(fono, rut, nombre, direccion, correo);
             JOptionPane.showMessageDialog(null,"Desarrollador ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());

@@ -388,10 +388,9 @@ public class IngresarUsuario extends javax.swing.JPanel {
         verificarCamposEnBlanco(correo, "correo");
         try{
             Visualizador.sistema.ingresarUsuario(fecha, comuna, telefono, rut, nombre, direccion, correo);
-            JOptionPane.showMessageDialog(null,"Usuario ingresado.");
+            JOptionPane.showMessageDialog(null,"VideoJuego ingresado.");
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null,e.getMessage());
-            
+            JOptionPane.showMessageDialog(null,e.getMessage());   
         }
     }//GEN-LAST:event_jLabel_registrarMouseClicked
     public void verificarCamposEnBlanco(String campo,String nombre){

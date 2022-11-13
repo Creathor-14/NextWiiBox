@@ -109,6 +109,11 @@ public class Impl_prueba implements SistemaI{
         return lUsuario.add(u);
     }
     public boolean ingresarVideojuego(int codigo, String nombre, String version, String fechaD, String categoria, String genero, int precio, String rutDesarrollador){
+    // precio negativo
+        if(precio<0){
+            throw new NullPointerException("El valor del videoJuego no puede ser negativo.");
+        }
+
     // codigo unico
         int posicion = 0;
         for(VideoJuego v:lVideojugo){
@@ -133,7 +138,7 @@ public class Impl_prueba implements SistemaI{
         }
         throw new NullPointerException("No existe el desarrollador con el rut "+rutDesarrollador);
     }
-    public boolean ingresarDesarrollador(String fono, String rut, String nombre, String comuna, String correo){
+    public boolean ingresarDesarrollador(String fono, String rut, String nombre, String direccion, String correo){
     // rut y correo unico
         if(!rutUnico(rut)){
             throw new NullPointerException("El rut ya existe en el sistema.");
@@ -142,7 +147,7 @@ public class Impl_prueba implements SistemaI{
             throw new NullPointerException("El correo ya existe en el sistema.");
         }
     // ingresar el desarrollador
-        Desarrollador d = new Desarrollador(fono, rut, nombre, comuna, correo);
+        Desarrollador d = new Desarrollador(fono, rut, nombre, direccion, correo);
         return lDesarrollador.add(d);
     }
     public boolean ingresarVendedor(String fono, String rut, String nombre, String direccion, String correo){
@@ -268,9 +273,7 @@ public class Impl_prueba implements SistemaI{
     public int buscarDesarrollador(String rut){
         for(int i=0;i<lDesarrollador.size();i++){
             Desarrollador u = lDesarrollador.get(i);
-            System.out.println(u.getRut()+" / "+rut);
             if(u.getRut().equalsIgnoreCase(rut)){
-                System.out.println("Encontrado");
                 return i;
             }
         }
@@ -289,41 +292,43 @@ public class Impl_prueba implements SistemaI{
 //-------------------------------------ACTUALIZAR-------------------------------------
     
     public void actualizarUsuario(int posicionUsuario,String fechaN, String comuna, String telefono, String nombre, String direccion){
-        Usuario u = lUsuario.get(posicionUsuario);
         Fecha f;
         try{
             f=new Fecha(fechaN);
         }catch(Exception e){
             throw new NullPointerException(e.getMessage());
         }
+        Usuario u = lUsuario.get(posicionUsuario);
         u.setFechaN(f);
         u.setComuna(comuna);
         u.setTelefono(telefono);
         u.setNombre(nombre);
         u.setDireccion(direccion);
     }
-    public void actualizarVendedor(int posicionUsuario, String fono, String nombre, String direccion, String correo){
+    public void actualizarVendedor(int posicionUsuario, String fono, String nombre, String direccion, String clave){
         Vendedor v = lVendedor.get(posicionUsuario);
         v.setFono(fono);
         v.setNombre(nombre);
         v.setDireccion(direccion);
-        v.setCorreo(correo);
+        v.setClave(clave);
     }
-    public void actualizarDesarrollador(int posicionUsuario, String fono, String nombre, String direccion, String correo){
+    public void actualizarDesarrollador(int posicionUsuario, String fono, String nombre, String direccion){
         Desarrollador d = lDesarrollador.get(posicionUsuario);
         d.setFono(fono);
         d.setNombre(nombre);
         d.setDireccion(direccion);
-        d.setCorreo(correo);
     }
     public void actualizarVideoJuego(int posicionVideoJuego, String nombre, String version, String fechaD, String categoria, String genero, int precio){
-        VideoJuego v = lVideojugo.get(posicionVideoJuego);
+        if(precio<0){
+            throw new NullPointerException("El valor del videoJuego no puede ser negativo.");
+        }
         Fecha f;
         try{
             f=new Fecha(fechaD);
         }catch(Exception e){
             throw new NullPointerException(e.getMessage());
         }
+        VideoJuego v = lVideojugo.get(posicionVideoJuego);
         v.setNombre(nombre);
         v.setVersion(version);
         v.setFechaD(f);
@@ -356,11 +361,20 @@ public class Impl_prueba implements SistemaI{
     public String [] obtenerDatosDesarrollador(int posicionDesarrollador){
         Desarrollador d = lDesarrollador.get(posicionDesarrollador);
         String [] datos = new String[3];
-        System.out.println("ok "+d.getRut());
         datos[0] = d.getNombre();
         datos[1] = d.getDireccion();
-        datos[2] = d.getFono();
-       
+        datos[2] = d.getFono();    
+        return datos;
+    }
+    public String [] obtenerDatosVideoJuego(int posicionVideoJuego){
+        VideoJuego v = lVideojugo.get(posicionVideoJuego);
+        String [] datos = new String[6];
+        datos[0] = v.getNombre();
+        datos[1] = v.getVersion();
+        datos[2] = v.getFechaD().toString();
+        datos[3] = v.getCategoria();
+        datos[4] = v.getGenero();
+        datos[5] = v.getPrecio()+"";
         return datos;
     }
 }

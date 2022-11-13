@@ -240,6 +240,14 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
 
     private void jLabel_actualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_actualizarMouseClicked
         // Guardar los datos nuevos
+        String nombre = jTextField_Nombre1.getText();
+        String direccion = jTextField_comuna1.getText();
+        String fono = jTextField_telefono1.getText();
+        
+        Visualizador.sistema.actualizarDesarrollador(posicionUsuario, fono, nombre, direccion);
+        JOptionPane.showMessageDialog(null,"Datos actualizados");
+        ocultar.setVisible(false);
+        jPanel_actualizar.setVisible(false);
     }//GEN-LAST:event_jLabel_actualizarMouseClicked
 
     private void jLabel_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_buscarMouseClicked
@@ -254,7 +262,6 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
             String nombre = datosDesarrollador[0];
             String direccion = datosDesarrollador[1];
             String fono = datosDesarrollador[2];
-            System.out.println(nombre);
             jTextField_Nombre1.setText(nombre);
             jTextField_comuna1.setText(direccion);
             jTextField_telefono1.setText(fono);
@@ -262,8 +269,6 @@ public class ActualizarDesarrollador extends javax.swing.JPanel {
             ocultar.setVisible(true);
             jPanel_actualizar.setVisible(true);
         }
-        
-        
     }//GEN-LAST:event_jLabel_buscarMouseClicked
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked

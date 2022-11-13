@@ -387,9 +387,14 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         String precio = jTextField_precio.getText();
         verificarCamposEnBlanco(precio, "precio");
         
-        String desarrollador = jTextField_desarrollador.getText();
-        verificarCamposEnBlanco(desarrollador, "desarrollador");
-        
+        String rutDesarrollador = jTextField_desarrollador.getText();
+        verificarCamposEnBlanco(rutDesarrollador, "rut del desarrollador");
+        try{
+            Visualizador.sistema.ingresarVideojuego(Integer.valueOf(codigo), nombre, version, fecha, categoria, genero, Integer.valueOf(precio), rutDesarrollador);
+            JOptionPane.showMessageDialog(null,"VideoJuego ingresado.");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage());   
+        }
         
     }//GEN-LAST:event_jLabel_registrarMouseClicked
     
