@@ -326,6 +326,24 @@ public class Impl_prueba implements SistemaI{
         }
         return -1;
     }
+    public int buscarArriendo(int codigo){
+        for(int i=0;i<lArriendo.size();i++){
+            Arriendo a = lArriendo.get(i);
+            if(a.getVideoJuego().getCodigo() == codigo){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int buscarArriendo(String rut){
+        for(int i=0;i<lDesarrollador.size();i++){
+            Arriendo a = lArriendo.get(i);
+            if(a.getUsuario().getRut().equalsIgnoreCase(rut)){
+                return i;
+            }
+        }
+        return -1;
+    }
     
 //-------------------------------------ACTUALIZAR-------------------------------------
     

@@ -13,15 +13,17 @@ import javax.swing.JOptionPane;
 public class ActualizarArriendo extends javax.swing.JPanel {
     
 
-    int posicion_usuario = -1;
+    int posicion_rut_arriendo;
+    int posicion_codigo_arriendo;
     /**
      * Creates new form IngresarUsuario
      */
     public ActualizarArriendo() {
         initComponents();
-        jTextField_codigoVideoJuego.setVisible(false);
-        jLabel_codigo.setVisible(false);
-        jSeparator_codigo.setVisible(false);
+        jTextField_fechaE.setVisible(false);
+        jLabel_fechaE.setVisible(false);
+        jSeparator_fechaE.setVisible(false);
+        jPanel_registrar.setVisible(false);
     }
 
     /**
@@ -43,10 +45,15 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         jSeparator_codigo = new javax.swing.JSeparator();
         jPanel_menu = new javax.swing.JPanel();
         jLabel_menu = new javax.swing.JLabel();
-        jPanel_buscar = new javax.swing.JPanel();
+        jPanel_buscar_codigo = new javax.swing.JPanel();
+        jLabel_buscar_segun_code = new javax.swing.JLabel();
+        jPanel_buscar_rut = new javax.swing.JPanel();
         jLabel_registrar1 = new javax.swing.JLabel();
         jPanel_registrar = new javax.swing.JPanel();
         jLabel_registrar = new javax.swing.JLabel();
+        jLabel_fechaE = new javax.swing.JLabel();
+        jSeparator_fechaE = new javax.swing.JSeparator();
+        jTextField_fechaE = new javax.swing.JTextField();
 
         actualizarArriendo.setBackground(new java.awt.Color(51, 51, 51));
         actualizarArriendo.setPreferredSize(new java.awt.Dimension(610, 460));
@@ -55,33 +62,41 @@ public class ActualizarArriendo extends javax.swing.JPanel {
                 actualizarArriendoMouseDragged(evt);
             }
         });
+        actualizarArriendo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel_Titulo.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setText("Actualizar Arriendo");
+        actualizarArriendo.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
         jLabel_rut.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_rut.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_rut.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_rut.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel_rut.setText("Rut cliente:");
+        actualizarArriendo.add(jLabel_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 130, -1));
 
         jTextField_rutCliente.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_rutCliente.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_rutCliente.setText("00.000.000-K");
         jTextField_rutCliente.setBorder(null);
+        actualizarArriendo.add(jTextField_rutCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 270, -1));
+        actualizarArriendo.add(jSeparator_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 270, 10));
 
         jLabel_codigo.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_codigo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_codigo.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_codigo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel_codigo.setText("Codigo videojuego:");
+        actualizarArriendo.add(jLabel_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 130, -1, -1));
 
         jTextField_codigoVideoJuego.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_codigoVideoJuego.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_codigoVideoJuego.setText("0001");
         jTextField_codigoVideoJuego.setBorder(null);
+        actualizarArriendo.add(jTextField_codigoVideoJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 270, -1));
+        actualizarArriendo.add(jSeparator_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 270, 10));
 
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -116,38 +131,71 @@ public class ActualizarArriendo extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel_buscar.setBackground(new java.awt.Color(0, 153, 153));
+        actualizarArriendo.add(jPanel_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, -1, -1));
+
+        jPanel_buscar_codigo.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_buscar_segun_code.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_buscar_segun_code.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_buscar_segun_code.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_buscar_segun_code.setText("Buscar por codigo");
+        jLabel_buscar_segun_code.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_buscar_segun_codeMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_buscar_codigoLayout = new javax.swing.GroupLayout(jPanel_buscar_codigo);
+        jPanel_buscar_codigo.setLayout(jPanel_buscar_codigoLayout);
+        jPanel_buscar_codigoLayout.setHorizontalGroup(
+            jPanel_buscar_codigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
+            .addGroup(jPanel_buscar_codigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_buscar_codigoLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_buscar_segun_code, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel_buscar_codigoLayout.setVerticalGroup(
+            jPanel_buscar_codigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel_buscar_codigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_buscar_codigoLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_buscar_segun_code, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        actualizarArriendo.add(jPanel_buscar_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, 33));
+
+        jPanel_buscar_rut.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel_registrar1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_registrar1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_registrar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_registrar1.setText("Buscar Arriendo");
+        jLabel_registrar1.setText("Buscar por rut");
         jLabel_registrar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_registrar1MouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel_buscarLayout = new javax.swing.GroupLayout(jPanel_buscar);
-        jPanel_buscar.setLayout(jPanel_buscarLayout);
-        jPanel_buscarLayout.setHorizontalGroup(
-            jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 180, Short.MAX_VALUE)
-            .addGroup(jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscarLayout.createSequentialGroup()
-                    .addGap(0, 0, 0)
-                    .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, 0)))
+        javax.swing.GroupLayout jPanel_buscar_rutLayout = new javax.swing.GroupLayout(jPanel_buscar_rut);
+        jPanel_buscar_rut.setLayout(jPanel_buscar_rutLayout);
+        jPanel_buscar_rutLayout.setHorizontalGroup(
+            jPanel_buscar_rutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_buscar_rutLayout.createSequentialGroup()
+                .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel_buscarLayout.setVerticalGroup(
-            jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscarLayout.createSequentialGroup()
-                    .addGap(0, 0, 0)
-                    .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        jPanel_buscar_rutLayout.setVerticalGroup(
+            jPanel_buscar_rutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_buscar_rutLayout.createSequentialGroup()
+                .addComponent(jLabel_registrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        actualizarArriendo.add(jPanel_buscar_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 180, 33));
 
         jPanel_registrar.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -182,68 +230,21 @@ public class ActualizarArriendo extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        javax.swing.GroupLayout actualizarArriendoLayout = new javax.swing.GroupLayout(actualizarArriendo);
-        actualizarArriendo.setLayout(actualizarArriendoLayout);
-        actualizarArriendoLayout.setHorizontalGroup(
-            actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jLabel_Titulo))
-                    .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(jLabel_rut, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jTextField_rutCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jSeparator_rut, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel_codigo)
-                        .addGap(10, 10, 10)
-                        .addComponent(jTextField_codigoVideoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jSeparator_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jPanel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(120, 120, 120)
-                        .addComponent(jPanel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(141, Short.MAX_VALUE))
-            .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                    .addGap(255, 255, 255)
-                    .addComponent(jPanel_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(224, Short.MAX_VALUE)))
-        );
-        actualizarArriendoLayout.setVerticalGroup(
-            actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel_Titulo)
-                .addGap(25, 25, 25)
-                .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_rut)
-                    .addComponent(jTextField_rutCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addComponent(jSeparator_rut, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_codigo)
-                    .addComponent(jTextField_codigoVideoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addComponent(jSeparator_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(170, 170, 170)
-                .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(83, Short.MAX_VALUE))
-            .addGroup(actualizarArriendoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(actualizarArriendoLayout.createSequentialGroup()
-                    .addGap(212, 212, 212)
-                    .addComponent(jPanel_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(215, Short.MAX_VALUE)))
-        );
+        actualizarArriendo.add(jPanel_registrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
+
+        jLabel_fechaE.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_fechaE.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_fechaE.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_fechaE.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_fechaE.setText("Fecha entrega:");
+        actualizarArriendo.add(jLabel_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 130, -1));
+        actualizarArriendo.add(jSeparator_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 270, 10));
+
+        jTextField_fechaE.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_fechaE.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_fechaE.setText("DD/MM/YY");
+        jTextField_fechaE.setBorder(null);
+        actualizarArriendo.add(jTextField_fechaE, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 270, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -273,13 +274,15 @@ public class ActualizarArriendo extends javax.swing.JPanel {
     private void jLabel_registrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrar1MouseClicked
         String rutCliente = jTextField_rutCliente.getText();
         verificarCamposEnBlanco(rutCliente, "rutCliente");
-        posicion_usuario = Visualizador.sistema.buscarUsuario(rutCliente);
-        if(posicion_usuario == -1){
-            JOptionPane.showMessageDialog(null,"No existe un usuario con este rut.");
+        
+        int posicion = Visualizador.sistema.buscarArriendo(rutCliente);
+        if(posicion == -1){
+            JOptionPane.showMessageDialog(null,"Este Usuario no tiene arriendos.");
         }else{
             jTextField_codigoVideoJuego.setVisible(true);
             jLabel_codigo.setVisible(true);
             jSeparator_codigo.setVisible(true);
+            posicion_rut_arriendo = posicion;
         }
 
     }//GEN-LAST:event_jLabel_registrar1MouseClicked
@@ -288,8 +291,7 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         String rutCliente = jTextField_rutCliente.getText();
         verificarCamposEnBlanco(rutCliente, "rutCliente");
 
-        String codigoVideoJuego = jTextField_codigoVideoJuego.getText();
-        verificarCamposEnBlanco(codigoVideoJuego, "codigoVideoJuego");
+        
 
         try{
             //Visualizador.sistema.ingresarArriendo(codigoVideoJuego, rutCliente);
@@ -309,21 +311,41 @@ public class ActualizarArriendo extends javax.swing.JPanel {
         //BORRAR
     }//GEN-LAST:event_actualizarArriendoMouseDragged
 
+    private void jLabel_buscar_segun_codeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_buscar_segun_codeMouseClicked
+        String codigoVideoJuego = jTextField_codigoVideoJuego.getText();
+        verificarCamposEnBlanco(codigoVideoJuego, "codigoVideoJuego");
+        
+        int posicion = Visualizador.sistema.buscarArriendo(WIDTH);// modificar todos los buscar con el codigo, agregar try.
+        if(posicion == -1){
+            JOptionPane.showMessageDialog(null,"Este Usuario no tiene arriendos.");
+        }else{
+            jTextField_codigoVideoJuego.setVisible(true);
+            jLabel_codigo.setVisible(true);
+            jSeparator_codigo.setVisible(true);
+            posicion_rut_arriendo = posicion;
+        }
+    }//GEN-LAST:event_jLabel_buscar_segun_codeMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actualizarArriendo;
     private javax.swing.JLabel jLabel_Titulo;
+    private javax.swing.JLabel jLabel_buscar_segun_code;
     private javax.swing.JLabel jLabel_codigo;
+    private javax.swing.JLabel jLabel_fechaE;
     private javax.swing.JLabel jLabel_menu;
     private javax.swing.JLabel jLabel_registrar;
     private javax.swing.JLabel jLabel_registrar1;
     private javax.swing.JLabel jLabel_rut;
-    private javax.swing.JPanel jPanel_buscar;
+    private javax.swing.JPanel jPanel_buscar_codigo;
+    private javax.swing.JPanel jPanel_buscar_rut;
     private javax.swing.JPanel jPanel_menu;
     private javax.swing.JPanel jPanel_registrar;
     private javax.swing.JSeparator jSeparator_codigo;
+    private javax.swing.JSeparator jSeparator_fechaE;
     private javax.swing.JSeparator jSeparator_rut;
     private javax.swing.JTextField jTextField_codigoVideoJuego;
+    private javax.swing.JTextField jTextField_fechaE;
     private javax.swing.JTextField jTextField_rutCliente;
     // End of variables declaration//GEN-END:variables
 }
