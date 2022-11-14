@@ -36,8 +36,8 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jLabel_nombre = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
         jSeparator_nombre = new javax.swing.JSeparator();
-        jLabel_direccion = new javax.swing.JLabel();
-        jTextField_direccion = new javax.swing.JTextField();
+        jLabel_correo = new javax.swing.JLabel();
+        jTextField_correo = new javax.swing.JTextField();
         jSeparator_direccion = new javax.swing.JSeparator();
         jLabel_comuna = new javax.swing.JLabel();
         jTextField_comuna = new javax.swing.JTextField();
@@ -85,26 +85,26 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jTextField_nombre.setText("Juan Navarro");
         jTextField_nombre.setBorder(null);
 
-        jLabel_direccion.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel_direccion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_direccion.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_direccion.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_direccion.setText("Direccion:");
+        jLabel_correo.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_correo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_correo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_correo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel_correo.setText("Correo:");
 
-        jTextField_direccion.setBackground(new java.awt.Color(51, 51, 51));
-        jTextField_direccion.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_direccion.setText("correoFalso1@dominioFalso.cl");
-        jTextField_direccion.setBorder(null);
+        jTextField_correo.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField_correo.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField_correo.setText("correoFalso1@dominioFalso.cl");
+        jTextField_correo.setBorder(null);
 
         jLabel_comuna.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_comuna.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_comuna.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_comuna.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel_comuna.setText("Comuna:");
+        jLabel_comuna.setText("Direccion:");
 
         jTextField_comuna.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_comuna.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_comuna.setText("San Joaquin");
+        jTextField_comuna.setText("direccion 12");
         jTextField_comuna.setBorder(null);
 
         jLabel_fono.setBackground(new java.awt.Color(255, 255, 255));
@@ -115,7 +115,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
 
         jTextField_fono.setBackground(new java.awt.Color(51, 51, 51));
         jTextField_fono.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField_fono.setText("Industrias 111");
+        jTextField_fono.setText("+56 9 8888 8888");
         jTextField_fono.setBorder(null);
 
         jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
@@ -123,7 +123,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu");
+        jLabel_menu.setText("Atras");
         jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_menuMouseClicked(evt);
@@ -211,9 +211,9 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
                         .addComponent(jSeparator_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ingresarDesarrolladorLayout.createSequentialGroup()
                         .addGap(120, 120, 120)
-                        .addComponent(jLabel_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jTextField_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ingresarDesarrolladorLayout.createSequentialGroup()
                         .addGap(260, 260, 260)
                         .addComponent(jSeparator_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -255,8 +255,8 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
                     .addComponent(jTextField_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jSeparator_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(ingresarDesarrolladorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_direccion)
-                    .addComponent(jTextField_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel_correo)
+                    .addComponent(jTextField_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jSeparator_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(ingresarDesarrolladorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_comuna)
@@ -287,12 +287,12 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Adm_Desarrollador Adm_Desarrollador = new Adm_Desarrollador();
-        Adm_Desarrollador.setSize(660, 460);
-        Adm_Desarrollador.setLocation(0,0);
+        Adm_Desarrollador adm_Desarrollador = new Adm_Desarrollador();
+        adm_Desarrollador.setSize(660, 460);
+        adm_Desarrollador.setLocation(0,0);
 
         ingresarDesarrollador.removeAll();
-        ingresarDesarrollador.add(Adm_Desarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarDesarrollador.add(adm_Desarrollador,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         ingresarDesarrollador.revalidate();
         ingresarDesarrollador.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked
@@ -305,11 +305,11 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         String nombre = jTextField_nombre.getText();
         verificarCamposEnBlanco(nombre, "nombre");
         
-        String direccion = jTextField_direccion.getText();
-        verificarCamposEnBlanco(direccion, "direccion");
+        String correo = jTextField_correo.getText();
+        verificarCamposEnBlanco(correo, "correo");
  
-        String comuna = jTextField_comuna.getText();
-        verificarCamposEnBlanco(comuna, "comuna");
+        String direccion = jTextField_comuna.getText();
+        verificarCamposEnBlanco(direccion, "direccion");
 
         String fono = jTextField_fono.getText();
         verificarCamposEnBlanco(fono, "fono");
@@ -317,7 +317,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
         
         
         try{
-            Visualizador.sistema.ingresarDesarrollador(rut, nombre, direccion, comuna, fono);
+            Visualizador.sistema.ingresarDesarrollador(fono, rut, nombre, direccion, correo);
             JOptionPane.showMessageDialog(null,"Desarrollador ingresado.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e.getMessage());
@@ -340,7 +340,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
     private javax.swing.JPanel ingresarDesarrollador;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JLabel jLabel_comuna;
-    private javax.swing.JLabel jLabel_direccion;
+    private javax.swing.JLabel jLabel_correo;
     private javax.swing.JLabel jLabel_fono;
     private javax.swing.JLabel jLabel_menu;
     private javax.swing.JLabel jLabel_nombre;
@@ -354,7 +354,7 @@ public class IngresarDesarrollador extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator_nombre;
     private javax.swing.JSeparator jSeparator_rut;
     private javax.swing.JTextField jTextField_comuna;
-    private javax.swing.JTextField jTextField_direccion;
+    private javax.swing.JTextField jTextField_correo;
     private javax.swing.JTextField jTextField_fono;
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_rut;

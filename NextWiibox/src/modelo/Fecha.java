@@ -19,11 +19,11 @@ public class Fecha {
                 m = Integer.valueOf(fechas[1]);
                 a = Integer.valueOf(fechas[2]);
             }catch(Exception e){
-            throw new NullPointerException("Error en el formato de la fecha"); 
+            throw new NullPointerException("Error en el formato de la fecha. (tipo_de_datos)"); 
         }
             
         }else{
-            throw new NullPointerException("Error en el formato de la fecha");
+            throw new NullPointerException("Error en el formato de la fecha. (/)");
         }
         try{
             if(verificarFecha(d, m, a)){
@@ -58,7 +58,7 @@ public class Fecha {
     
     public boolean verificarFecha(int dia, int mes, int año){
         //se invetaron las computadoras, hasta un año mas
-        if(año<0 || año>24){
+        if(año<0 || año>99){
             throw new NullPointerException("Año no valido");
         }
         if(mes<1 || mes>12){

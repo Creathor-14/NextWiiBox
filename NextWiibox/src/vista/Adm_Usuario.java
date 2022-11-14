@@ -164,7 +164,7 @@ public class Adm_Usuario extends javax.swing.JPanel {
         jLabel_Titulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Titulo.setText("USUARIO");
+        jLabel_Titulo.setText("MENU USUARIO");
         usuario.add(jLabel_Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 56, 200, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

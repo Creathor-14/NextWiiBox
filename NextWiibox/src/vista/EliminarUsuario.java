@@ -67,7 +67,7 @@ public class EliminarUsuario extends javax.swing.JPanel {
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu");
+        jLabel_menu.setText("Atras");
         jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_menuMouseClicked(evt);
@@ -166,7 +166,7 @@ public class EliminarUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_eliminarMouseClicked
-        String rut = jLabel_rut.getText();
+        String rut = jTextField_rut.getText();
         boolean eliminado = Visualizador.sistema.eliminarUsuario(rut);
         if(eliminado){
             JOptionPane.showMessageDialog(null,"Usuario eliminado.");

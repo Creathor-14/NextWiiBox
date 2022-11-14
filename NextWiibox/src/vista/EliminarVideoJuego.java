@@ -67,7 +67,7 @@ public class EliminarVideoJuego extends javax.swing.JPanel {
         jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu");
+        jLabel_menu.setText("Atras");
         jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_menuMouseClicked(evt);
@@ -155,19 +155,19 @@ public class EliminarVideoJuego extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_administrador menu = new Menu_administrador();
-        menu.setSize(660, 460);
-        menu.setLocation(0,0);
+        Adm_Videojuego adm_Videojuego = new Adm_Videojuego();
+        adm_Videojuego.setSize(660, 460);
+        adm_Videojuego.setLocation(0,0);
 
         eliminarUsuario.removeAll();
-        eliminarUsuario.add(menu,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        eliminarUsuario.add(adm_Videojuego,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
         eliminarUsuario.revalidate();
         eliminarUsuario.repaint();
     }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
-        String c = jLabel_rut.getText();
-        int codigo = Integer.valueOf(c);
+        String c = jTextField_rut.getText();
+        int codigo = Integer.parseInt(c);
         boolean eliminado = Visualizador.sistema.eliminarVideoJuego(codigo);
         if(eliminado){
             JOptionPane.showMessageDialog(null,"Videojuego eliminado.");

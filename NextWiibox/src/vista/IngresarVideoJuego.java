@@ -51,13 +51,13 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         jLabel_precio = new javax.swing.JLabel();
         jTextField_precio = new javax.swing.JTextField();
         jSeparator_desarrollador = new javax.swing.JSeparator();
-        jPanel_menu = new javax.swing.JPanel();
-        jLabel_menu = new javax.swing.JLabel();
         jPanel_registrar = new javax.swing.JPanel();
         jLabel_registrar = new javax.swing.JLabel();
         jLabel_desarrollador = new javax.swing.JLabel();
         jTextField_desarrollador = new javax.swing.JTextField();
         jSeparator_precio = new javax.swing.JSeparator();
+        jPanel_menu = new javax.swing.JPanel();
+        jLabel_menu = new javax.swing.JLabel();
 
         ingresarVideoJuego.setBackground(new java.awt.Color(51, 51, 51));
         ingresarVideoJuego.setPreferredSize(new java.awt.Dimension(610, 460));
@@ -149,39 +149,6 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         jTextField_precio.setText("10000");
         jTextField_precio.setBorder(null);
 
-        jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
-
-        jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_menu.setText("Menu");
-        jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_menuMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel_menuLayout = new javax.swing.GroupLayout(jPanel_menu);
-        jPanel_menu.setLayout(jPanel_menuLayout);
-        jPanel_menuLayout.setHorizontalGroup(
-            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
-            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_menuLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jPanel_menuLayout.setVerticalGroup(
-            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_menuLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-
         jPanel_registrar.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel_registrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -198,21 +165,13 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         jPanel_registrar.setLayout(jPanel_registrarLayout);
         jPanel_registrarLayout.setHorizontalGroup(
             jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
-            .addGroup(jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_registrarLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel_registrarLayout.setVerticalGroup(
             jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-            .addGroup(jPanel_registrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel_registrarLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_registrarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel_desarrollador.setBackground(new java.awt.Color(255, 255, 255));
@@ -225,6 +184,39 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         jTextField_desarrollador.setForeground(new java.awt.Color(102, 102, 102));
         jTextField_desarrollador.setText("11.111.111-1");
         jTextField_desarrollador.setBorder(null);
+
+        jPanel_menu.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel_menu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel_menu.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_menu.setText("Atras");
+        jLabel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_menuMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_menuLayout = new javax.swing.GroupLayout(jPanel_menu);
+        jPanel_menu.setLayout(jPanel_menuLayout);
+        jPanel_menuLayout.setHorizontalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel_menuLayout.setVerticalGroup(
+            jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+            .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         javax.swing.GroupLayout ingresarVideoJuegoLayout = new javax.swing.GroupLayout(ingresarVideoJuego);
         ingresarVideoJuego.setLayout(ingresarVideoJuegoLayout);
@@ -284,11 +276,6 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
                         .addGap(260, 260, 260)
                         .addComponent(jSeparator_genero, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ingresarVideoJuegoLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jPanel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(128, 128, 128)
-                        .addComponent(jPanel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ingresarVideoJuegoLayout.createSequentialGroup()
                         .addGap(120, 120, 120)
                         .addGroup(ingresarVideoJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -298,8 +285,16 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
                             .addComponent(jSeparator_desarrollador, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField_desarrollador, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField_precio, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(ingresarVideoJuegoLayout.createSequentialGroup()
+                        .addGap(410, 410, 410)
+                        .addComponent(jPanel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(130, Short.MAX_VALUE))
+            .addGroup(ingresarVideoJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ingresarVideoJuegoLayout.createSequentialGroup()
+                    .addContainerGap(157, Short.MAX_VALUE)
+                    .addComponent(jPanel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(403, Short.MAX_VALUE)))
         );
         ingresarVideoJuegoLayout.setVerticalGroup(
             ingresarVideoJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -345,11 +340,14 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
                             .addComponent(jTextField_desarrollador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator_desarrollador, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
-                .addGroup(ingresarVideoJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(jPanel_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 41, Short.MAX_VALUE))
+            .addGroup(ingresarVideoJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ingresarVideoJuegoLayout.createSequentialGroup()
+                    .addContainerGap(381, Short.MAX_VALUE)
+                    .addComponent(jPanel_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(44, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -365,17 +363,6 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
                 .addComponent(ingresarVideoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
-        Menu_administrador menu = new Menu_administrador();
-        menu.setSize(660, 460);
-        menu.setLocation(0,0);
-
-        ingresarVideoJuego.removeAll();
-        ingresarVideoJuego.add(menu,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
-        ingresarVideoJuego.revalidate();
-        ingresarVideoJuego.repaint();
-    }//GEN-LAST:event_jLabel_menuMouseClicked
 
     private void jLabel_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_registrarMouseClicked
         
@@ -400,9 +387,15 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
         String precio = jTextField_precio.getText();
         verificarCamposEnBlanco(precio, "precio");
         
-        String desarrollador = jTextField_desarrollador.getText();
-        verificarCamposEnBlanco(desarrollador, "desarrollador");
+        String rutDesarrollador = jTextField_desarrollador.getText();
+        verificarCamposEnBlanco(rutDesarrollador, "rut del desarrollador");
         
+        try{
+            Visualizador.sistema.ingresarVideojuego(codigo, nombre, version, fecha, categoria, genero, precio, rutDesarrollador);
+            JOptionPane.showMessageDialog(null,"VideoJuego ingresado.");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage());   
+        }
         
     }//GEN-LAST:event_jLabel_registrarMouseClicked
     
@@ -415,6 +408,17 @@ public class IngresarVideoJuego extends javax.swing.JPanel {
     private void ingresarVideoJuegoMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarVideoJuegoMouseDragged
         //BORRAR
     }//GEN-LAST:event_ingresarVideoJuegoMouseDragged
+
+    private void jLabel_menuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_menuMouseClicked
+        Adm_Videojuego adm_Videojuego = new Adm_Videojuego();
+        adm_Videojuego.setSize(660, 460);
+        adm_Videojuego.setLocation(0,0);
+
+        ingresarVideoJuego.removeAll();
+        ingresarVideoJuego.add(adm_Videojuego,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        ingresarVideoJuego.revalidate();
+        ingresarVideoJuego.repaint();
+    }//GEN-LAST:event_jLabel_menuMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

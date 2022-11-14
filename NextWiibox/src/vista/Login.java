@@ -37,6 +37,7 @@ public class Login extends javax.swing.JPanel {
         jPanel_entrar1 = new javax.swing.JPanel();
         jLabel_Acceder1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         login.setBackground(new java.awt.Color(51, 51, 51));
         login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -139,6 +140,14 @@ public class Login extends javax.swing.JPanel {
         });
         login.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
 
+        jButton2.setText("Prueba Tablas");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        login.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -212,9 +221,22 @@ public class Login extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        
+        Pruebas pruebas = new Pruebas();
+        pruebas.setSize(660, 460);
+        pruebas.setLocation(0,0);
+
+        login.removeAll();
+        login.add(pruebas,new org.netbeans.lib.awtextra.AbsoluteConstraints(0,0,-1,-1));
+        login.revalidate();
+        login.repaint();
+    }//GEN-LAST:event_jButton2MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel_Acceder1;
     private javax.swing.JLabel jLabel_Titulo1;
     private javax.swing.JLabel jLabel_contraseña1;
