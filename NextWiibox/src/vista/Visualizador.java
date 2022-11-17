@@ -4,11 +4,10 @@
  */
 package vista;
 
+
 import controlador.Impl_prueba;
 import java.awt.Color;
-import java.awt.Dimension;
-import javax.swing.JComponent;
-import javax.swing.SwingUtilities;
+
 
 /**
  *
@@ -123,40 +122,7 @@ public class Visualizador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public static void Der(JComponent componente, int milisegundos, int saltos,int parar){
-        (new Thread(){
-            public void run(){
-                System.out.println("mientras "+parar+" sea mayor a "+componente.getWidth());
-                for(int i=componente.getWidth();i>= parar;i -=saltos){
-                    try{
-                        Thread.sleep(milisegundos);
-                        componente.setPreferredSize(new Dimension(i, componente.getHeight()) );
-                        SwingUtilities.updateComponentTreeUI(componente);
-                    }catch(InterruptedException e){
-                        //System.out.println(e);
-                        //break;
-                    }
-                }
-            }
-        }).start();
-    }
-    public static void Izq(JComponent componente, int milisegundos, int saltos,int parar){
-        (new Thread(){
-            public void run(){
-                System.out.println("mientras "+parar+" sea menor a "+componente.getWidth());
-                for(int i=componente.getWidth();i<= parar;i +=saltos){
-                    try{
-                        Thread.sleep(milisegundos);
-                        componente.setPreferredSize(new Dimension(i, componente.getHeight()) );
-                        SwingUtilities.updateComponentTreeUI(componente);
-                    }catch(Exception e){
-                        System.out.println("xd");
-                        //break;
-                    }
-                }
-            }
-        }).start();
-    }
+
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
